@@ -2,7 +2,7 @@
 <h3 id="bschttpbsc-ai-student-howest-head-of-it-adscreen-builder" class="md-heading" data-line="2"><a href="http://B.Sc">B.Sc</a>. AI Student @ Howest | Head of IT @ Adscreen | Builder<a class="heading-anchor" href="#bschttpbsc-ai-student-howest-head-of-it-adscreen-builder" data-heading-id="bschttpbsc-ai-student-howest-head-of-it-adscreen-builder" title="Copy link">#</a></h3>
 <hr data-line="4">
 <p data-line="6">🎓 Second-year <strong>Artificial Intelligence</strong> student at <a href="https://www.howest.be/">Howest</a> (Kortrijk, Belgium)<br>
-🏢 Currently managing IT infrastructure for <strong>1,000+ AI tablets</strong> at <a href="https://adscreen.com">Adscreen</a><br>
+🏢 Currently managing IT infrastructure for <strong>1,000+ AI tablets</strong> at <a href="https://adscreen.az">Adscreen</a><br>
 🏆 International Gold Medalist in Mathematics<br>
 🚁 Built AI drone navigation system that secured venture investment<br>
 📍 Based in <strong>Kortrijk, Belgium</strong></p>
