@@ -1,16 +1,37 @@
-## Hi there 👋
-
-<!--
-**aghasalim/aghasalim** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<h1 id="hey-there-i’m-aghasalim-👋" class="md-heading" data-line="0">Hey there, I’m Aghasalim 👋<a class="heading-anchor" href="#hey-there-i’m-aghasalim-👋" data-heading-id="hey-there-i%E2%80%99m-aghasalim-%F0%9F%91%8B" title="Copy link">#</a></h1>
+<h3 id="bschttpbsc-ai-student-howest-head-of-it-adscreen-builder" class="md-heading" data-line="2"><a href="http://B.Sc">B.Sc</a>. AI Student @ Howest | Head of IT @ Adscreen | Builder<a class="heading-anchor" href="#bschttpbsc-ai-student-howest-head-of-it-adscreen-builder" data-heading-id="bschttpbsc-ai-student-howest-head-of-it-adscreen-builder" title="Copy link">#</a></h3>
+<hr data-line="4">
+<p data-line="6">🎓 Second-year <strong>Artificial Intelligence</strong> student at <a href="https://www.howest.be/">Howest</a> (Kortrijk, Belgium)<br>
+🏢 Currently managing IT infrastructure for <strong>1,000+ AI tablets</strong> at <a href="https://adscreen.com">Adscreen</a><br>
+🏆 International Gold Medalist in Mathematics<br>
+🚁 Built AI drone navigation system that secured venture investment<br>
+📍 Based in <strong>Kortrijk, Belgium</strong></p>
+<hr data-line="12">
+<h2 id="🔭-what-i’m-working-on" class="md-heading" data-line="14">🔭 What I’m Working On<a class="heading-anchor" href="#🔭-what-i’m-working-on" data-heading-id="%F0%9F%94%AD-what-i%E2%80%99m-working-on" title="Copy link">#</a></h2>
+<ul data-line="16">
+<li>Scaling AI-powered digital signage infrastructure at Adscreen</li>
+<li>Computer vision models for real-time audience analytics</li>
+<li>Deep learning coursework &amp; research projects at Howest</li>
+<li>Looking for <strong>jobstudent / internship</strong> opportunities in AI &amp; Backend</li>
+</ul>
+<h2 id="🌱-currently-learning" class="md-heading" data-line="21">🌱 Currently Learning<a class="heading-anchor" href="#🌱-currently-learning" data-heading-id="%F0%9F%8C%B1-currently-learning" title="Copy link">#</a></h2>
+<ul data-line="23">
+<li>Advanced Deep Learning architectures</li>
+<li>MLOps best practices (MLflow, model versioning)</li>
+<li>Edge AI deployment &amp; optimization</li>
+<li>Dutch 🇧🇪 (daily practice in Kortrijk)</li>
+</ul>
+<hr data-line="28">
+<h2 id="my-skill-set" class="md-heading" data-line="30">My Skill Set<a class="heading-anchor" href="#my-skill-set" data-heading-id="my-skill-set" title="Copy link">#</a></h2>
+<table><tbody><tr><td valign="top" width="33%"><h3 id="ai-ml" class="md-heading" data-line="38">AI / ML</h3><div align="center"><a href="https://www.python.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" height="50"></a> <a href="https://www.tensorflow.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/tensorflow-icon.svg" alt="TensorFlow" height="50"></a> <a href="https://pytorch.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/pytorch-icon.svg" alt="PyTorch" height="50"></a> <a href="https://opencv.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/opencv-icon.svg" alt="OpenCV" height="50"></a> <a href="https://keras.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/keras.png" alt="Keras" height="50"></a></div></td><td valign="top" width="33%"><h3 id="backend" class="md-heading" data-line="49">Backend</h3><div align="center"><a href="https://www.python.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" height="50"></a> <a href="https://nodejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="50"></a> <a href="https://www.postgresql.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/postgresql-original-wordmark.svg" alt="PostgreSQL" height="50"></a> <a href="https://www.mongodb.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/mongodb-original-wordmark.svg" alt="MongoDB" height="50"></a> <a href="https://www.mysql.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" height="50"></a> <a href="https://www.linux.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" height="50"></a> <a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50"></a> <a href="https://www.gnu.org/software/bash/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg" alt="Bash" height="50"></a></div></td><td valign="top" width="33%"><h3 id="frontend-devops" class="md-heading" data-line="63">Frontend &amp; DevOps</h3><div align="center"><a href="https://reactjs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50"></a> <a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50"></a> <a href="https://www.w3schools.com/css/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50"></a> <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50"></a> <a href="https://www.docker.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/docker-original-wordmark.svg" alt="Docker" height="50"></a> <a href="https://kubernetes.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/kubernetes-icon.svg" alt="Kubernetes" height="50"></a> <a href="https://www.arduino.cc/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/arduino.png" alt="Arduino" height="50"></a> <a href="https://www.raspberrypi.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/raspberrypi.png" alt="Raspberry Pi" height="50"></a></div></td></tr></tbody></table>
+<hr data-line="34">
+<h2 id="connect-with-me" class="md-heading" data-line="36">Connect with me<a class="heading-anchor" href="#connect-with-me" data-heading-id="connect-with-me" title="Copy link">#</a></h2>
+<p data-line="38"><a href="https://github.com/aghasalim"><img src="https://img.shields.io/badge/github-%2324292e.svg?&amp;style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="github" class="md-image zoomable" loading="lazy"></a><a href="https://linkedin.com/in/mustafazada"><img src="https://img.shields.io/badge/linkedin-%231E77B5.svg?&amp;style=for-the-badge&amp;logo=linkedin&amp;logoColor=white" alt="linkedin" class="md-image zoomable" loading="lazy"> </a><a href="https://instagram.com/fwsalim"><img src="https://img.shields.io/badge/instagram-%23000000.svg?&amp;style=for-the-badge&amp;logo=instagram&amp;logoColor=white" alt="instagram" class="md-image zoomable" loading="lazy"> </a><a href="mailto:salim.mustafazada@student.howest.be"><img src="https://img.shields.io/badge/email-%23D14836.svg?&amp;style=for-the-badge&amp;logo=gmail&amp;logoColor=white" alt="email" class="md-image zoomable" loading="lazy"></a></p>
+<hr data-line="40">
+<h2 id="github-stats" class="md-heading" data-line="42">Github Stats<a class="heading-anchor" href="#github-stats" data-heading-id="github-stats" title="Copy link">#</a></h2>
+<p data-line="44"><img src="https://github-readme-stats.vercel.app/api?username=aghasalim&amp;show_icons=true&amp;count_private=true&amp;hide_border=true&amp;theme=tokyonight" alt="" class="md-image zoomable" loading="lazy"></p>
+<p data-line="48"><img src="https://github-readme-streak-stats.herokuapp.com/?user=aghasalim&amp;theme=tokyonight&amp;hide_border=true" alt="" class="md-image zoomable" loading="lazy"></p>
+<p data-line="52"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aghasalim&amp;hide_border=true&amp;layout=compact&amp;theme=tokyonight" alt="" class="md-image zoomable" loading="lazy"></p>
+<hr data-line="54">
+<p data-line="56"><img src="https://komarev.com/ghpvc/?username=aghasalim&amp;style=flat-square&amp;color=blue" alt="Profile views" class="md-image zoomable" loading="lazy"></p>
+<p data-line="58"><strong>If you’re hiring for AI / Backend / Full-stack roles in Belgium or the EU — let’s talk.</strong></p>
