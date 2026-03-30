@@ -1,30 +1,58 @@
-# Hey there, I’m Aghasalim 👋
+<div align="center">
 
-### [B.Sc](http://B.Sc). AI Student @ Howest | Head of IT @ Adscreen | Builder
+<!-- Animated wave header -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:16213e,100:0f3460&height=220&section=header&text=Aghasalim%20Mustafazada&fontSize=42&fontColor=e94560&fontAlignY=35&desc=AI%20Engineer%20%7C%20Head%20of%20IT%20%7C%20Builder&descSize=18&descColor=ffffff&descAlignY=55&animation=fadeIn" width="100%" />
 
----
+<!-- Animated typing -->
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=E94560&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=80&lines=B.Sc.+AI+Student+%40+Howest+%F0%9F%87%A7%F0%9F%87%AA;Head+of+IT+%40+Adscreen+%7C+1%2C000%2B+AI+Tablets;International+Gold+Medalist+in+Mathematics+%F0%9F%A5%87;AI+Drone+Builder+%7C+Venture-Backed+Innovator+%F0%9F%9A%81)](https://git.io/typing-svg)
 
-🎓 Second-year **Artificial Intelligence** student at [Howest](https://www.howest.be/) (Kortrijk, Belgium)  
-🏢 Currently managing IT infrastructure for **1,000+ AI tablets** at [Adscreen](https://adscreen.com)  
-🏆 International Gold Medalist in Mathematics  
-🚁 Built AI drone navigation system that secured venture investment  
-📍 Based in **Kortrijk, Belgium**
+</div>
 
 ---
 
-## 🔭 What I’m Working On
+<img align="right" width="300" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWRiMm44bW5rNW9qZGpxZzF4b2RhZjNtaHFjOTdlcHV6NHlnZyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/qgQUggAC3Pfv687qPC/giphy.gif" alt="coding gif"/>
 
--   Scaling AI-powered digital signage infrastructure at Adscreen
--   Computer vision models for real-time audience analytics
--   Deep learning coursework & research projects at Howest
--   Looking for **jobstudent / internship** opportunities in AI & Backend
+## 🧑‍💻 About Me
+
+```yaml
+name: Aghasalim Mustafazada
+location: Kortrijk, Belgium 🇧🇪
+education: B.Sc. Artificial Intelligence @ Howest (2nd year)
+current_role: Head of IT @ Adscreen
+experience: 4+ years in programming, teaching & IT infrastructure
+status: Open to AI / Backend jobstudent & internship roles
+fun_fact: "I manage 1,000+ AI tablets by day, study deep learning by night"
+```
+
+- 🎓 Second-year **Artificial Intelligence** student at [Howest](https://www.howest.be/) (Kortrijk, Belgium)
+- 🏢 Managing IT infrastructure for **1,000+ AI-powered digital signage tablets** at [Adscreen](https://adscreen.com)
+- 🏆 **Gold Medal** — International STEM Olympiad, Mathematics (France, 2022)
+- 🥉 **Bronze Medal** — International STEM Olympiad, German Language (Germany, 2023)
+- 🚁 Built an **AI drone navigation system** that secured venture investment
+- 👨‍🏫 Former **Programming Instructor** at STEP IT Academy (4 years, 200+ students)
+- 🌍 Multilingual: Azerbaijani, English (C1), Turkish, German (A2-B1), Dutch (learning)
+
+<br clear="right"/>
+
+---
+
+## 🔭 What I'm Working On
+
+| Project | Description | Stack |
+|---------|-------------|-------|
+| 🖥️ **Adscreen Infrastructure** | Scaling AI tablet fleet across Belgium & Netherlands | Python, Docker, SQL, CV models |
+| 🧠 **Audience Analytics** | Real-time computer vision for driver/passenger engagement | TensorFlow, OpenCV, FastAPI |
+| 📊 **ML Targeting Engine** | Recommendation system for personalized ad delivery | scikit-learn, PostgreSQL, REST APIs |
+| 🎓 **Howest AI Projects** | Deep learning coursework, NLP classifiers, CV pipelines | PyTorch, Transformers, YOLO |
 
 ## 🌱 Currently Learning
 
--   Advanced Deep Learning architectures
--   MLOps best practices (MLflow, model versioning)
--   Edge AI deployment & optimization
--   Dutch 🇧🇪 (daily practice in Kortrijk)
+| Domain | Topics |
+|--------|--------|
+| 🧬 Deep Learning | Advanced architectures, attention mechanisms, generative models |
+| ⚙️ MLOps | MLflow, model versioning, automated retraining pipelines |
+| 📦 Edge AI | Model optimization, ONNX, deployment on resource-constrained devices |
+| 🗣️ Languages | Dutch (daily practice in Kortrijk 🇧🇪) |
 
 ---
 
