@@ -1,64 +1,50 @@
 # Aghasalim Mustafazada
 
-AI student at [Howest](https://www.howest.be/) in Kortrijk, Belgium, and Head of IT at
-[Adscreen](https://adscreen.com), where I look after the infrastructure behind 1,000+
-AI-powered signage tablets.
+I work on computer vision and machine learning systems. Currently studying artificial
+intelligence at Howest in Kortrijk, Belgium, and running the IT infrastructure at
+Adscreen for a fleet of around 1,000 AI signage tablets.
 
-Currently looking for AI or backend internship / jobstudent roles.
+My interests are anomaly detection, model interpretability, and the question of whether
+a method that looks good on a benchmark still holds up once it has to make a decision.
 
-- B.Sc. Artificial Intelligence at Howest, second year
-- Gold medal, International STEM Olympiad (Mathematics), France 2022
-- Bronze medal, International STEM Olympiad (German), Germany 2023
-- Taught programming at STEP IT Academy for 4 years, around 200 students
-- Azerbaijani, English (C1), Turkish, German (A2-B1), learning Dutch
+Open to AI and backend internships.
 
-## Projects
+### Selected projects
 
-**[Explainable Visual Defect Detector](https://github.com/aghasalim/explainable-defect-detector)**
+**Explainable Visual Defect Detector** ·
+[code](https://github.com/aghasalim/explainable-defect-detector)
 
-Finds defects in product photos and shows where they are. It is built from normal
-images only, so it never sees a labelled defect. PatchCore implemented from the paper,
-0.9874 mean image AUROC across all 15 MVTec AD categories. The heatmaps are checked
-against pixel ground truth rather than eyeballed, which turned up a useful result: a
-supervised classifier scored 0.96 AUROC on one category while its Grad-CAM never
-pointed at the actual defect.
+Industrial defect detection built from normal images only, with no labelled defects in
+training. Reimplements PatchCore (Roth et al., CVPR 2022) and reproduces it across all
+15 MVTec AD categories at 0.9874 mean image AUROC. Localisation is scored against pixel
+ground truth with a random-heatmap control, which surfaced the more interesting result:
+a supervised baseline reached 0.96 AUROC on one category while its Grad-CAM never
+overlapped the actual defect.
 
-PyTorch · Streamlit · Docker · GitHub Actions
+**Drone navigation for urban environments** ·
+[writeup](https://www.linkedin.com/posts/mustafazada_ai-machinelearning-smartcities-ugcPost-7423344619452547072-VDn0)
 
-**AI Drone Navigation for Smart Cities** - [writeup](https://www.linkedin.com/posts/mustafazada_ai-machinelearning-smartcities-ugcPost-7423344619452547072-VDn0)
+Autonomous navigation for dense cities, where GPS alone degrades from signal occlusion
+and moving obstacles. Sensor fusion over LiDAR and camera with learned path planning.
+The prototype attracted venture funding.
 
-Autonomous drone navigation for dense urban areas, where GPS alone breaks down because
-of signal occlusion and moving obstacles. Combines LiDAR and camera sensor fusion with
-learned path planning. The prototype secured venture investment.
+**RFID and face recognition attendance terminal** ·
+[build guide](https://www.instructables.com/Build-Your-Own-RFID-Face-Recognition-Attendance-Sy/)
 
-Python · TensorFlow · OpenCV · ROS
+Two-factor identity check: the card has to match the face at the camera. Raspberry Pi
+and Arduino over serial, YOLOv8 for recognition, offline logging and a local dashboard,
+custom enclosure. No cloud dependency.
 
-**[RFID and Face Recognition Attendance System](https://www.instructables.com/Build-Your-Own-RFID-Face-Recognition-Attendance-Sy/)**
+### Background
 
-An attendance terminal with a two-factor check: the RFID card has to match the face at
-the camera. Raspberry Pi 4 talking to an Arduino Mega over serial, YOLOv8 for face
-recognition, local web dashboard for students and logs, custom 3D-printed case. Runs
-fully offline. Published on Instructables.
+Second-year B.Sc. Artificial Intelligence at Howest. Gold medal at the International
+STEM Olympiad in mathematics (France, 2022) and bronze in German (Germany, 2023). Four
+years teaching programming at STEP IT Academy, roughly 200 students. Azerbaijani,
+English, Turkish, German, and learning Dutch.
 
-Python · OpenCV · YOLOv8 · Arduino C++
+Mostly Python and PyTorch, with Docker, FastAPI, PostgreSQL and Arduino alongside.
 
-## Working on
+### Contact
 
-- Scaling the Adscreen tablet fleet across Belgium and the Netherlands
-- Real-time computer vision for audience analytics
-- A recommendation engine for ad targeting
-- Deep learning coursework at Howest, mostly CV and NLP
-
-## Tools I use
-
-**ML** Python, PyTorch, TensorFlow, OpenCV, scikit-learn, NumPy, Pandas
-**Backend** FastAPI, Flask, Node.js, PostgreSQL, MongoDB, MySQL
-**Ops** Docker, Kubernetes, Nginx, Linux, Git
-**Hardware** Arduino, Raspberry Pi, C++
-
-## Contact
-
-[LinkedIn](https://linkedin.com/in/mustafazada) ·
-[Email](mailto:salim.mustafazada@student.howest.be)
-
-![](https://github-readme-stats.vercel.app/api?username=aghasalim&show_icons=true&count_private=true&hide_border=true&theme=tokyonight)
+salim.mustafazada@student.howest.be ·
+[LinkedIn](https://linkedin.com/in/mustafazada)
