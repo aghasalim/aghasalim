@@ -44,6 +44,7 @@ fun_fact: "I manage 1,000+ AI tablets by day, study deep learning by night"
 | 🧠 **Audience Analytics** | Real-time computer vision for driver/passenger engagement | TensorFlow, OpenCV, FastAPI |
 | 📊 **ML Targeting Engine** | Recommendation system for personalized ad delivery | scikit-learn, PostgreSQL, REST APIs |
 | 🎓 **Howest AI Projects** | Deep learning coursework, NLP classifiers, CV pipelines | PyTorch, Transformers, YOLO |
+| 🔍 **[Explainable Defect Detector](https://github.com/aghasalim/explainable-defect-detector)** | Anomaly detection + verified heatmaps, 0.987 mean AUROC on MVTec AD | PyTorch, PatchCore, Streamlit, Docker |
 
 ## 🌱 Currently Learning
 
@@ -57,6 +58,37 @@ fun_fact: "I manage 1,000+ AI tablets by day, study deep learning by night"
 ---
 
 ## 🚀 Featured Projects
+
+### 🔍 Explainable Visual Defect Detector
+> *Anomaly detection for industrial inspection — trained on normal images only*
+
+<a href="https://github.com/aghasalim/explainable-defect-detector">
+  <img src="https://img.shields.io/badge/Code-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repo"/>
+</a>
+<a href="https://github.com/aghasalim/explainable-defect-detector/actions">
+  <img src="https://img.shields.io/github/actions/workflow/status/aghasalim/explainable-defect-detector/ci.yml?branch=main&style=for-the-badge&label=CI" alt="CI"/>
+</a>
+<!-- LIVE DEMO: once the Hugging Face Space is up, uncomment this and replace <your-hf-username>
+<a href="https://huggingface.co/spaces/<your-hf-username>/explainable-defect-detector">
+  <img src="https://img.shields.io/badge/Live%20Demo-Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Live Demo"/>
+</a>
+-->
+
+A production-shaped **visual inspection system** that flags defective parts *and shows where the defect is* — built entirely from normal examples, because in real factories defects are rare and expensive to label. Implements **PatchCore** (Roth et al., CVPR 2022) from the paper and reproduces it across the full MVTec AD benchmark.
+
+| Aspect | Details |
+|---|---|
+| **Problem** | Supervised defect classifiers need labelled examples of every failure mode — unrealistic when defects are rare, varied, and costly to collect |
+| **Approach** | Memorise patch embeddings from *normal* parts only (frozen WideResNet50-2, layer2+3), flag anything unlike them. No training loop, no gradient step |
+| **Efficiency** | Greedy k-center coreset keeps **1%** of patches (163k → 1.6k) — ablation shows random sampling at the same budget collapses to 0.55 AUROC vs **0.87** |
+| **Result** | **Mean image AUROC 0.9874** across all 15 MVTec categories vs the paper's 0.990; two independent runs agreed to 1e-6 on all 60 metrics |
+| **Explainability** | Heatmaps *verified against pixel ground truth*, not eyeballed — AUPRO, peak-in-mask and top-1% precision, each with a random-map control |
+| **Key finding** | A supervised classifier hit **0.959 AUROC on `screw` while its Grad-CAM landed on the defect 0% of the time** — right answers, wrong reasons, caught only by measuring the explanation |
+| **Deployment** | Threshold calibrated on held-out *normal* images (never on test), then audited against reality: 100% recall on `bottle`, but a documented **53.8%** on `screw` — the gap between a benchmark score and a shipped system |
+| **Engineering** | Streamlit demo, Docker (CPU, port 7860), GitHub Actions CI, seeded and reproducible, self-checks that assert each metric *fails* on deliberately wrong input |
+| **Tech Stack** | PyTorch, torchvision, scikit-learn, SciPy, NumPy, Streamlit, Docker, uv, ruff, GitHub Actions |
+
+---
 
 ### 🚁 AI-Powered Drone Navigation System for Smart Cities
 > *#AI #MachineLearning #SmartCities*
