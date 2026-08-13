@@ -12,6 +12,7 @@ Open to AI and backend internships.
 ### Selected projects
 
 **Explainable Visual Defect Detector** ·
+[live demo](https://explainable-defect-detector.streamlit.app/) ·
 [code](https://github.com/aghasalim/explainable-defect-detector)
 
 Industrial defect detection built from normal images only, with no labelled defects in
