@@ -13,7 +13,8 @@ Open to AI and backend internships.
 
 **Explainable Visual Defect Detector** ·
 [live demo](https://explainable-defect-detector.streamlit.app/) ·
-[code](https://github.com/aghasalim/explainable-defect-detector)
+[code](https://github.com/aghasalim/explainable-defect-detector) ·
+[writeup](https://www.linkedin.com/feed/update/urn:li:share:7493814687101464576/)
 
 Industrial defect detection built from normal images only, with no labelled defects in
 training. Reimplements PatchCore (Roth et al., CVPR 2022) and reproduces it across all
