@@ -21,6 +21,16 @@ ground truth with a random-heatmap control, which surfaced the more interesting 
 a supervised baseline reached 0.96 AUROC on one category while its Grad-CAM never
 overlapped the actual defect.
 
+Turning that into something that can actually say OK or DEFECT was the harder half. My
+first threshold, a 99th percentile over a small held-out set of normal images, hit its 1%
+false-alarm target in only 3 of 15 categories and flagged 43% of good carpet. The
+empirical quantile of a small sample sits near its maximum, which estimates the 96th
+percentile rather than the 99th. Replacing it with k-fold cross-calibration and a
+one-sided nonparametric tolerance bound got 13 of 15 within target, at a measured cost of
+8 points of recall. One category is left failing on purpose, because its test images are
+genuinely more varied than anything in training and calibrating it any further would mean
+using the test set.
+
 **Drone navigation for urban environments** ·
 [writeup](https://www.linkedin.com/posts/mustafazada_ai-machinelearning-smartcities-ugcPost-7423344619452547072-VDn0)
 
