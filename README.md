@@ -17,6 +17,30 @@ I had a project's figures sit stale here after it was re-evaluated —
 
 ### Selected projects
 
+**Smart IVC cage — the software platform** ·
+[code](https://github.com/aghasalim/smart-ivc-cage-platform)
+
+A full stack for an instrumented individually ventilated cage used in laboratory
+animal research, built for an external client: FastAPI backend, React dashboard,
+Arduino Mega firmware and Raspberry Pi device services, reachable over HTTPS through a
+Cloudflare Tunnel with **no inbound port open** on the lab network, redeploying itself
+within 60 seconds of a push via a pull-only pipeline the device can never accept a push
+into. A three-person team project — 173 of the 204 commits are mine, covering the
+backend, dashboard, firmware, device services and deployment; the behaviour-classifier
+models are principally a teammate's, and the repository says so.
+
+The part I would point at is the water dosing. Delivering an *exact* volume to an animal
+is not "run the pump for N seconds": a flow sensor counts what actually arrives, the pump
+stops early and coasts because water already in the pipe keeps moving, and a
+normally-closed solenoid shuts the instant the pump stops or gravity siphons the tank
+through the line and the dose silently continues. Each of those is a failure mode that
+produces plausible but wrong intake data. The README also refuses its own headline number:
+the behaviour classifier's reported macro-F1 of 0.996 is measured on splits of a
+rule-based synthetic generator, so it captures how separable that generator made its own
+classes — two unrelated model families tie at exactly 0.996 and logistic regression
+reaches 0.935, which is what a saturated benchmark looks like. No labelled real-animal
+data was ever collected, so the inference path is validated as working, not as accurate.
+
 **Explainable Visual Defect Detector** ·
 [live demo](https://explainable-defect-detector.streamlit.app/) ·
 [code](https://github.com/aghasalim/explainable-defect-detector)
