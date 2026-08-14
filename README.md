@@ -106,7 +106,7 @@ custom enclosure. No cloud dependency.
 
 ### Background
 
-Second-year B.Sc. Artificial Intelligence at Howest. Gold medal at the International
+Third-year B.Sc. Artificial Intelligence at Howest. Gold medal at the International
 STEM Olympiad in mathematics (France, 2022) and bronze in German (Germany, 2023). Four
 years teaching programming at STEP IT Academy, roughly 200 students. Azerbaijani,
 English, Turkish, German, and learning Dutch.
