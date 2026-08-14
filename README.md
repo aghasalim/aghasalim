@@ -272,6 +272,21 @@ separately with disjoint vendor lists, asserted by a test: held-out synthetic da
 95.3% against the hand-written 75.6%, and generating the benchmark from the training script
 would have let me report the 95.3% instead.
 
+**Offline metrics vs online lift** ·
+[code](https://github.com/aghasalim/recsys-offline-online)
+
+Recommender evaluation graded against an answer that was already measured. Open
+Bandit Dataset logged two policies on live traffic at once, so the true online
+CTR of each is known and any offline estimate can be scored rather than trusted.
+The naive methods people ship land at −30% and +54% on opposite sides of the
+truth; propensity correction brings that to under 2%. The useful part is where
+it still breaks: removing items from the logs drives the error to −89.6% while
+effective sample size, the diagnostic everyone checks, *rises* to 47.6%. So the
+deliverable is a gate that refuses to report a number when the target policy
+puts mass on actions the logs never saw.
+
+Python · pandas · scikit-learn · Streamlit · Docker
+
 **Drone navigation for urban environments** ·
 [writeup](https://www.linkedin.com/posts/mustafazada_ai-machinelearning-smartcities-ugcPost-7423344619452547072-VDn0)
 
