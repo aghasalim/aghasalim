@@ -141,7 +141,11 @@ and the monitor reported **healthy**. A KS test drops non-finite values, so a
 conspicuous failure in production produced a *cleaner* report than normal
 traffic. `day_index` was separately scoring PSI 12.4 in every scenario including
 the healthy control, because it is position in the calendar and drifts by
-construction, permanently consuming one of forty alert slots. Both thresholds I
+construction, permanently consuming one of forty alert slots. Chasing that turned
+up something worse: `day_index` is the 8th most important feature of 443 in the
+model it serves, so the fraud model is using absolute calendar position as a
+predictor — every production day falls outside the training range, so it can only
+mislead. This project found a defect in the previous one. Both thresholds I
 picked were wrong in opposite directions — one demanded 6 of 40 features fire
 when the measured null is 0 of 40, and fixing that made the next one alarm on
 every batch including the controls, since missing rates move 14% on their own.
@@ -187,31 +191,6 @@ that raised earnings look like one that destroyed them, −$8,498 and −$15,205
 pulls it back, but 20 adjusted estimates span $237 to $3,843 while every balance
 diagnostic reads textbook-clean. Good balance is necessary, not sufficient: it says the
 groups match on what you measured and is silent on everything else.
-
-**Production pipeline, with the monitoring actually broken on purpose** ·
-[code](https://github.com/aghasalim/mlops-fraud-pipeline)
-
-The fraud model above served behind FastAPI, versioned in MLflow, gated by CI, and
-monitored for drift. It catches 3 of 3 injected failures with 0 false alarms on two
-controls, which is what the exercise asks for and the least interesting thing in the
-repo. What I would rather be asked about is that **my detector was broken before I
-injected anything**. I simulated the identity provider going down — every `id_*`
-column arriving null — and the monitor reported healthy. A KS test drops non-finite
-values, so a 100%-null column has nothing left to compare and scores PSI 0: a total
-feed outage produced a *cleaner* report than normal traffic.
-
-Two more things I had backwards. I built a Benjamini-Hochberg correction for
-multiple testing, because raw KS flags 3.35 of 40 features on two random halves of
-identical data. The correction is not what fixes it — a **PSI effect-size gate** is,
-and with that in place BH and Bonferroni have nothing left to do. And across eight
-windows of real forward traffic the model loses **0.060–0.137 AUC** with nothing
-broken, just time passing, while prediction PSI correlates **−0.709** with that
-loss: the output distribution looks most stable exactly where the model is doing
-worst. An in-sample evaluation hid all of it at 0.97–0.99 until I scored a probe
-model trained only on the baseline period — the same lesson as the fraud repo, that
-the measurement was broken before the thing being measured. The project also found a
-defect in the model it serves: `day_index` is the 8th most important feature of 443,
-so the model uses absolute calendar position, which can only mislead once deployed.
 
 **ARC-AGI-2 — a real attempt that scores zero** ·
 [code](https://github.com/aghasalim/arc-prize-2026)
