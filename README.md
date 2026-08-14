@@ -123,6 +123,35 @@ to exactly 1.0000 by handing the model a near-unique key per customer. I also pr
 leak from early stopping, measured it at +0.0006, and withdrew the claim — a trail
 containing only confirmed hypotheses is a highlight reel.
 
+**A/B testing and causal inference, checked against known answers** ·
+[code](https://github.com/aghasalim/ab-causal)
+
+A causal estimate has nothing to check against, because the "otherwise" never happened.
+So the usual version of this project — a t-test and a p-value on a marketing dataset —
+would look identical if the method were completely wrong. Everything here is run where
+the true answer is known instead: simulations where I set the effect myself, and one
+dataset where a randomised experiment already settled it.
+
+Checking a test daily for two weeks turns a 5% error rate into **22.3%**, so a "95%
+confident" result is wrong more than one time in five. The trap in that table is the
+power column: naive peeking has the *highest* power, 84%, because it declares
+significance more often whether or not anything is real, and a dashboard shows you that
+column and not the one beside it. Pocock boundaries and always-valid mSPRT both fix the
+error rate and neither is free — mSPRT also needs a `tau` that the usual advice omits,
+and setting it 5× too small collapses power from 42% to 0.4%.
+
+CUPED delivers its advertised 81% variance reduction at ρ=0.9, then fails silently. Give
+it a covariate that treatment moved and it reports **exactly zero effect** on a feature
+that works perfectly, with a standard error identical to the case where it is right —
+nothing widens, nothing looks unstable, and you ship "no impact" with a tight interval. I
+had that backwards at first and wrote a test asserting CUPED was biased; it was correctly
+returning the direct effect while I was calling the total effect the truth. On LaLonde,
+where the randomised answer is **+$1,794**, swapping in survey controls makes a programme
+that raised earnings look like one that destroyed them, −$8,498 and −$15,205. Adjustment
+pulls it back, but 20 adjusted estimates span $237 to $3,843 while every balance
+diagnostic reads textbook-clean. Good balance is necessary, not sufficient: it says the
+groups match on what you measured and is silent on everything else.
+
 **Drone navigation for urban environments** ·
 [writeup](https://www.linkedin.com/posts/mustafazada_ai-machinelearning-smartcities-ugcPost-7423344619452547072-VDn0)
 
