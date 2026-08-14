@@ -99,6 +99,30 @@ operating point that flatters it. Building the set by hand caught a bug that wou
 corrupted every number: "plate" is not one of COCO's 80 categories, so probing for it
 would have measured the label vocabulary instead of the model.
 
+**Fraud detection, with the decision trail as the deliverable** ·
+[live demo](https://ieee-fraud-ml.streamlit.app/) ·
+[code](https://github.com/aghasalim/ieee-fraud-ml)
+
+The IEEE-CIS competition worked end to end: 590,540 transactions across 394 columns,
+3.5% fraud, 172 columns between half and entirely missing. I built the validation
+splitter before touching a model, because the number that matters here is not the score
+but whether the score is real. Between the most flattering configuration and the most
+defensible one — chronological folds, fold-local encodings, and a 30-day embargo that
+matches the gap before the real test period — sits **0.1044 AUC**, 0.9557 against 0.8513.
+That is roughly the distance from the top of the leaderboard to its middle, and all of it
+is methodology rather than modelling.
+
+The entry I would most want to be asked about is the one where I was wrong. I first ran
+the leakage experiment on synthetic data and concluded the leaky feature outweighed the
+bad split by 4.4×. Re-running it on all 590k real rows reversed the ratio to 0.72× — the
+simulation had correctly predicted that both leaks were real, and got the relative
+magnitudes backwards, which was exactly what I had used it to decide. Target encoding
+turned out to be a bad feature in two separate ways: computed globally it inflates the
+score by +0.045, computed correctly it lowers the honest one by −0.031, driving train AUC
+to exactly 1.0000 by handing the model a near-unique key per customer. I also predicted a
+leak from early stopping, measured it at +0.0006, and withdrew the claim — a trail
+containing only confirmed hypotheses is a highlight reel.
+
 **Drone navigation for urban environments** ·
 [writeup](https://www.linkedin.com/posts/mustafazada_ai-machinelearning-smartcities-ugcPost-7423344619452547072-VDn0)
 
