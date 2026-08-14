@@ -33,7 +33,7 @@ genuinely more varied than anything in training and calibrating it any further w
 using the test set.
 
 **EU AI Act RAG, with an evaluation I actually ran** ·
-[live demo](https://eu-ai-act-rag-fdhdgvcx8ushlxwdluv9oc.streamlit.app/) ·
+[live demo](https://eu-ai-act-rag-eval.streamlit.app/) ·
 [code](https://github.com/aghasalim/eu-ai-act-rag)
 
 Question answering over Regulation (EU) 2024/1689, built so that the measurement is the
