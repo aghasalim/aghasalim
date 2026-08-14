@@ -9,6 +9,12 @@ a method that looks good on a benchmark still holds up once it has to make a dec
 
 Open to AI and backend internships.
 
+[![claims checked](https://github.com/aghasalim/aghasalim/actions/workflows/check-claims.yml/badge.svg)](https://github.com/aghasalim/aghasalim/actions/workflows/check-claims.yml)
+
+Every number quoted below is re-checked weekly against the repo it came from, because
+I had a project's figures sit stale here after it was re-evaluated —
+[check_claims.py](scripts/check_claims.py).
+
 ### Selected projects
 
 **Explainable Visual Defect Detector** ·
