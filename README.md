@@ -220,14 +220,18 @@ diagnostic reads textbook-clean. Good balance is necessary, not sufficient: it s
 groups match on what you measured and is silent on everything else.
 
 **ARC-AGI-2 — a real attempt that scores zero** ·
+[submitted notebook](https://www.kaggle.com/code/aghasalimmustafazada/arc-agi-2-dsl-search) ·
 [code](https://github.com/aghasalim/arc-prize-2026)
 
-An entry to [ARC Prize 2026](https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2),
+A submitted entry to [ARC Prize 2026](https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2),
 Chollet's reasoning benchmark: object-centric DSL with a verifier-backed program
-search. **39 of 1,000 public training tasks (3.9%) and 0 of 120 public evaluation
-tasks (0.0%)** — and on 120 of 120 it produced no candidate program at all, not even
-a wrong one. The grand-prize bar is 85%, so a solo DSL search was never going to
-approach it; the useful output is a characterisation of the gap. The collapse is
+search. **Leaderboard score 0.00** on the 240-task hidden set, alongside 39 of 1,000
+public training tasks (3.9%) and 0 of 120 public evaluation tasks — and on 120 of 120
+it produced no candidate program at all, not even a wrong one. I wrote the prediction
+into the README before submitting, "at or very near 0%", so the public set turned out
+to be a faithful guide to the private one and the zero was not an artefact of those
+particular 120 tasks. The grand-prize bar is 85%, so a solo DSL search was never going
+to approach it; the useful output is a characterisation of the gap. The collapse is
 structural rather than noise: the eval split has 2.05× larger grids, 7.06 colours
 against 5.39, and *fewer* demo pairs to infer from. Every one of my 39 solves is a
 single global rule applied to the whole grid, and the eval set is built from
@@ -240,7 +244,10 @@ representation survives, and four solves are pure object selection. The number I
 find most useful is one no leaderboard returns: **3 tasks where a program reproduced
 every demonstration pair and still failed the test**, 7% of the 42 the verifier
 accepted. I also measured the tempting fix instead of assuming it — doubling search
-depth moves training from 27 tasks to 39 and leaves evaluation at 0 either way.
+depth moves training from 27 tasks to 39 and leaves evaluation at 0 either way. And
+the two-attempt allowance the competition grants contributed *nothing* to what I
+submitted: with no candidate found, both attempts fall back to echoing the input, so
+they are byte-identical on all 240 tasks.
 
 **LoRA fine-tuning, with the forgetting check** ·
 [code](https://github.com/aghasalim/lora-forgetting)
