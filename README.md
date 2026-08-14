@@ -61,6 +61,7 @@ retrieved, the system produces a confident, well-cited, half-right answer that s
 on its own would never surface.
 
 **Reward shaping on a custom robot arm** ·
+[live demo](https://rl-arm-reward-shaping.streamlit.app/) ·
 [code](https://github.com/aghasalim/rl-arm-reward-shaping)
 
 A two-link torque-controlled arm that has to reach a target and *stop* there without
@@ -81,6 +82,7 @@ success and wins only on collisions, 17.3% against 25.5%. Training it 2.7× long
 than halved the score, which I report and cannot explain.
 
 **Hallucination-aware captioning** ·
+[live demo](https://vlm-hallucination-eval.streamlit.app/) ·
 [code](https://github.com/aghasalim/vlm-hallucination-eval)
 
 I set out to catch a vision-language model confidently describing things that are not
