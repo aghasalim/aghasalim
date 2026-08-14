@@ -33,6 +33,7 @@ genuinely more varied than anything in training and calibrating it any further w
 using the test set.
 
 **EU AI Act RAG, with an evaluation I actually ran** ·
+[live demo](https://eu-ai-act-rag-fdhdgvcx8ushlxwdluv9oc.streamlit.app/) ·
 [code](https://github.com/aghasalim/eu-ai-act-rag)
 
 Question answering over Regulation (EU) 2024/1689, built so that the measurement is the
@@ -48,8 +49,16 @@ legal text runs on exact phrases like "serious incident" and "putting into servi
 a 384-dimensional vector smooths over exactly those distinctions. And the 180 recitals
 were sabotaging retrieval — they restate the rules in flowing prose, so they look more
 like an answer to a plain question than the binding article does. Down-weighting them
-moved MRR from 0.581 to 0.790. Faithfulness needs an API key and has not been measured,
-so that section of the README is empty rather than guessed.
+moved MRR from 0.581 to 0.790.
+
+Generation is graded by a different model family, so it is not marking its own work:
+92.6% faithfulness, 100% citation validity, and 12 out of 12 out-of-scope questions
+correctly refused with nothing hallucinated, including ones written to bait it. The
+number I find most useful is that multi-hop answer accuracy (25.0%) tracks multi-hop
+retrieval almost exactly — when only one of the two articles a question needs is
+retrieved, the system produces a confident, well-cited, half-right answer that stays
+*faithful to an incomplete set of passages*. That is the failure a faithfulness score
+on its own would never surface.
 
 **Reward shaping on a custom robot arm** ·
 [code](https://github.com/aghasalim/rl-arm-reward-shaping)
