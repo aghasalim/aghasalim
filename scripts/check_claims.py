@@ -35,6 +35,10 @@ OWNER = "aghasalim"
 SOURCES = ["README.md", "RESULTS.md", "NOTES.md"]
 
 REPO_LINK = re.compile(rf"https://github\.com/{OWNER}/([A-Za-z0-9._-]+)")
+# This repo links to itself (the badge). Left in, the intro would be "verified"
+# against the very file the figures were read from, which always passes and
+# therefore checks nothing.
+SELF = OWNER
 # A percentage with a decimal, or a bare 0.xxx / n.xxx decimal.
 FIGURE = re.compile(r"\b\d{1,3}\.\d+%|\b\d\.\d{3,4}\b")
 
@@ -69,7 +73,7 @@ def sections(text: str) -> list[tuple[str, str]]:
     out = []
     for p in parts:
         m = REPO_LINK.search(p)
-        if m:
+        if m and m.group(1) != SELF:
             out.append((m.group(1), p))
     return out
 
