@@ -68,10 +68,32 @@ def fetch(repo: str, path: str) -> str:
 
 
 def sections(text: str) -> list[tuple[str, str]]:
-    """Split the profile into project blocks keyed by their linked repo."""
-    parts = re.split(r"\n(?=\*\*[^*\n]+\*\*\s*·)", text)
+    """Split the profile into project blocks keyed by their linked repo.
+
+    Two kinds of block, because the profile quotes figures in two places:
+
+    * a row of the index table, which links exactly one repo;
+    * a prose write-up, introduced by a bold title followed by a middot.
+
+    Table rows are pulled out *first* and excluded from the prose split. Left in,
+    the whole table would fall into the leading part, `REPO_LINK.search` would
+    match whichever repo is listed first, and every figure in the index would be
+    checked against that one project -- reporting drift for ten repos whose
+    numbers are fine.
+    """
+    table_rows, prose_lines = [], []
+    for line in text.splitlines():
+        if line.lstrip().startswith("|") and REPO_LINK.search(line):
+            table_rows.append(line)
+        else:
+            prose_lines.append(line)
+
     out = []
-    for p in parts:
+    for row in table_rows:
+        m = REPO_LINK.search(row)
+        if m and m.group(1) != SELF:
+            out.append((m.group(1), row))
+    for p in re.split(r"\n(?=\*\*[^*\n]+\*\*\s*·)", "\n".join(prose_lines)):
         m = REPO_LINK.search(p)
         if m and m.group(1) != SELF:
             out.append((m.group(1), p))
