@@ -108,11 +108,22 @@ would have measured the label vocabulary instead of the model.
 The IEEE-CIS competition worked end to end: 590,540 transactions across 394 columns,
 3.5% fraud, 172 columns between half and entirely missing. I built the validation
 splitter before touching a model, because the number that matters here is not the score
-but whether the score is real. Between the most flattering configuration and the most
-defensible one — chronological folds, fold-local encodings, and a 30-day embargo that
-matches the gap before the real test period — sits **0.1044 AUC**, 0.9557 against 0.8513.
-That is roughly the distance from the top of the leaderboard to its middle, and all of it
-is methodology rather than modelling.
+but whether the score is real. My careful configuration — chronological folds, fold-local
+encodings, a 30-day embargo matching the gap before the real test period — read 0.8513
+against 0.9557 for the most flattering one, and I called the careful number the honest one.
+
+Then I submitted, to check it against a scorer I could not influence. **The private
+leaderboard came back 0.9086**, and both my estimates were wrong in opposite directions.
+The leakage finding held up — a shuffled split with global target encoding really is
++0.047 optimistic, confirmed externally. But my "defensible" number was −0.057 *pessimistic*,
+and the less careful estimate I had replaced it with was closer to the truth. The
+explanation was sitting in my own results, read as a caveat rather than a prediction:
+validation AUC climbed monotonically with training history (0.8672 → 0.8855 → 0.9003),
+and the submitted model trains on all 182 days — more than any fold ever saw. Expanding-window
+CV estimates a model trained on a fraction of your data, not the one you ship, and the
+embargo widens that gap by removing another 30 days from every fold. I had treated "more
+conservative" as a synonym for "more correct"; a pessimistic estimate is still a biased
+one, and on that number I would have rejected a model materially better than I believed.
 
 The entry I would most want to be asked about is the one where I was wrong. I first ran
 the leakage experiment on synthetic data and concluded the leaky feature outweighed the
