@@ -49,16 +49,26 @@ legal text runs on exact phrases like "serious incident" and "putting into servi
 a 384-dimensional vector smooths over exactly those distinctions. And the 180 recitals
 were sabotaging retrieval — they restate the rules in flowing prose, so they look more
 like an answer to a plain question than the binding article does. Down-weighting them
-moved MRR from 0.581 to 0.790.
+moved MRR from 0.586 to 0.795.
 
 Generation is graded by a different model family, so it is not marking its own work:
-92.6% faithfulness, 100% citation validity, and 12 out of 12 out-of-scope questions
-correctly refused with nothing hallucinated, including ones written to bait it. The
-number I find most useful is that multi-hop answer accuracy (25.0%) tracks multi-hop
-retrieval almost exactly — when only one of the two articles a question needs is
-retrieved, the system produces a confident, well-cited, half-right answer that stays
-*faithful to an incomplete set of passages*. That is the failure a faithfulness score
-on its own would never surface.
+90.2% faithfulness, 100% citation validity, and 12 out of 12 out-of-scope questions
+correctly refused with nothing hallucinated, including ones written to bait it.
+
+The finding I would most want to be asked about is a measurement bug that was costing me
+12 points of accuracy, and hitting the hardest questions hardest. My token cap was 800 —
+but on a reasoning model that budget is *shared*, and the hidden reasoning block is billed
+against it before any answer is emitted. A question that reasons for 800 tokens returns an
+empty string: no error, no warning, just sixty seconds of latency and nothing back. Four
+answers came back empty, and all four were multi-hop, because those reason longest.
+Raising the cap doubled multi-hop accuracy from 25.0% to 50.0% and strict accuracy from
+54.5% to 66.7%. I had already written up that 25% as a clean retrieval story — the system
+finds one of two required articles and answers half the question. That story was partly
+true and partly my own truncation, and I could not tell which until the empty answers were
+gone. An empty string scores exactly like a wrong answer, and nothing in an aggregate
+metric distinguishes them. Multi-hop is still the weak half at 50% against single-hop's
+76%, and faithfulness on it *fell* once answers were no longer truncated — a longer answer
+makes more claims, and more claims means more chances for one to go unsupported.
 
 **Reward shaping on a custom robot arm** ·
 [live demo](https://rl-arm-reward-shaping.streamlit.app/) ·
