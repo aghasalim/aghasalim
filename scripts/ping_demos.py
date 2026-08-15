@@ -34,10 +34,17 @@ DEMOS = {
 }
 
 WAKE_BUTTON = "text=Yes, get this app back up!"
-# Streamlit renders the app inside this; its presence means the app really ran,
-# as opposed to the shell having loaded.
-APP_READY = "[data-testid='stAppViewContainer'], .stAppViewContainer, section.main"
-WAKE_TIMEOUT_MS = 180_000
+
+# Streamlit Community Cloud serves a WRAPPER page and runs the real app inside
+# an iframe titled "streamlitApp" (src .../~/+/). The wrapper is where the page
+# title and the Zzzz screen live; the app's own DOM is only reachable through
+# the frame. My first version waited for stAppViewContainer on the wrapper, so
+# every app timed out at 180s while its title loaded perfectly - five green
+# titles and five FAILED rows, which is exactly what a selector aimed at the
+# wrong document looks like.
+APP_FRAME = 'iframe[title="streamlitApp"]'
+APP_READY = '[data-testid="stApp"]'
+WAKE_TIMEOUT_MS = 120_000
 
 
 def check(page, name: str, url: str) -> dict:
@@ -53,11 +60,16 @@ def check(page, name: str, url: str) -> dict:
         pass  # not asleep, or it woke before we looked
 
     try:
-        page.wait_for_selector(APP_READY, timeout=WAKE_TIMEOUT_MS)
-        # the container can appear before the script finishes its first run
+        page.wait_for_selector(APP_FRAME, timeout=60_000)
+        app = page.frame_locator(APP_FRAME).locator(APP_READY)
+        app.wait_for(state="attached", timeout=WAKE_TIMEOUT_MS)
+        # the container attaches before the first script run finishes
         page.wait_for_timeout(4_000)
         row["ok"] = True
         row["woken"] = row["was_asleep"]
+        # prove the app rendered its own content, not just an empty container
+        row["chars"] = len(page.frame_locator(APP_FRAME)
+                           .locator("body").inner_text(timeout=20_000))
     except Exception as e:
         row["ok"] = False
         row["error"] = type(e).__name__
@@ -82,12 +94,14 @@ def main() -> int:
             ctx.close()
         browser.close()
 
-    print(f"{'demo':30} {'status':>10} {'asleep?':>9} {'secs':>7}  title")
+    print(f"{'demo':30} {'status':>10} {'asleep?':>9} {'secs':>7}  "
+          f"{'text':>12}  title")
     for r in rows:
         status = "ok" if r.get("ok") else "FAILED"
         asleep = "was asleep" if r.get("was_asleep") else "-"
         print(f"{r['demo']:30} {status:>10} {asleep:>9} "
-              f"{r.get('seconds', 0):7.1f}  {r.get('title', '')[:40]}")
+              f"{r.get('seconds', 0):7.1f}  {r.get('chars', 0):>6} chars  "
+              f"{r.get('title', '')[:34]}")
 
     woke = [r["demo"] for r in rows if r.get("was_asleep")]
     dead = [r["demo"] for r in rows if not r.get("ok")]
