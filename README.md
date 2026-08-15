@@ -17,7 +17,7 @@ CI against its source — including the ones that make me look bad.
 
 ## 💼 Projects
 
-Eleven repositories, five with live demos. Each one's README carries the full
+Thirteen repositories, five with live demos. Each one's README carries the full
 reasoning — the methodology, the failures, and the numbers I would rather state
 myself than have a reviewer find.
 
@@ -34,6 +34,8 @@ myself than have a reviewer find.
 | **ARC-AGI-2 attempt** | A real attempt that scores 3.9% — published because a negative result honestly reported is still a result | [code](https://github.com/aghasalim/arc-prize-2026) |
 | **LoRA fine-tuning** | The catastrophic-forgetting check most tutorials skip: an adapter of 0.28% of parameters, trained to a final loss of 0.0000, still degraded held-out behaviour | [code](https://github.com/aghasalim/lora-forgetting) |
 | **Offline vs online metrics** | Where offline ranking gains and online lift disagree: a respectable-looking AUC of 0.5386 next to what the policy actually earns in simulation | [code](https://github.com/aghasalim/recsys-offline-online) |
+| **SpuriousAD** | A planted-confound anomaly benchmark built to prove heatmaps land on the wrong region. Image AUROC stays 1.000 at every correlation level — but the ablation showed the apparent faithfulness collapse was an artefact, and label correlation contributes nothing | [code](https://github.com/aghasalim/spurious-ad) |
+| **GraphCiteFaith** | Does an LLM narrating a GNN explanation describe the subgraph it was given, or the answer it was told? Citation validity is 1.000 across 192 narrations while one model names the correct structure 33% of the time | [code](https://github.com/aghasalim/graph-cite-faith) |
 | **Drone urban navigation** | Autonomous navigation coursework — perception and path planning | — |
 | **RFID + face attendance terminal** | Two-factor identity check on Raspberry Pi + Arduino, fully offline | [build guide](https://www.instructables.com/Build-Your-Own-RFID-Face-Recognition-Attendance-Sy/) |
 
