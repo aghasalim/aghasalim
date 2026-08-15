@@ -17,7 +17,7 @@ CI against its source — including the ones that make me look bad.
 
 ## 💼 Projects
 
-Sixteen repositories, five with live demos. Each one's README carries the full
+Nineteen repositories, five with live demos. Each one's README carries the full
 reasoning — the methodology, the failures, and the numbers I would rather state
 myself than have a reviewer find.
 
@@ -30,16 +30,19 @@ myself than have a reviewer find.
 | **Hallucination-aware captioning** | Hand-verified adversarial set of 33 images; BLIP hallucinates on 4.5% of probes but misses 29% of objects that are present | [demo](https://vlm-hallucination-eval.streamlit.app/) · [code](https://github.com/aghasalim/vlm-hallucination-eval) |
 | **Fraud detection decision trail** | IEEE-CIS worked end to end; 0.1044 AUC separates the flattering split from the defensible one, and I caught my own synthetic-data conclusion being backwards | [demo](https://ieee-fraud-ml.streamlit.app/) · [code](https://github.com/aghasalim/ieee-fraud-ml) |
 | **MLOps pipeline** | Monitoring deliberately broken to prove the drift detector fires. The model loses 0.060–0.137 AUC to time alone, and prediction PSI correlates −0.709 with that loss | [code](https://github.com/aghasalim/mlops-fraud-pipeline) |
+| **AI Act fairness audit** | A fairness audit of my own fraud model that refuted its own premise — Annex III expressly exempts fraud detection, so the audit was never legally required — and found the segment with the lowest false-positive rate is the one the model abandons: 82% of transactions, 1.4% of their fraud caught | [code](https://github.com/aghasalim/ai-act-fairness-audit) |
 | **A/B testing & causal inference** | Estimators validated against simulations with known ground truth before meeting real data — mSPRT proved *more* conservative than specified, 0.9% error against a nominal 5% | [code](https://github.com/aghasalim/ab-causal) |
 | **ARC-AGI-2 attempt** | A real attempt that scores 3.9% — published because a negative result honestly reported is still a result | [code](https://github.com/aghasalim/arc-prize-2026) |
 | **LoRA fine-tuning** | The catastrophic-forgetting check most tutorials skip: an adapter of 0.28% of parameters, trained to a final loss of 0.0000, still degraded held-out behaviour | [code](https://github.com/aghasalim/lora-forgetting) |
 | **Offline vs online metrics** | Where offline ranking gains and online lift disagree: a respectable-looking AUC of 0.5386 next to what the policy actually earns in simulation | [code](https://github.com/aghasalim/recsys-offline-online) |
+| **Forecast backtesting** | Built to prove random splits leak in time series, then measured that they barely do: the split costs 4.1% MASE where the forecast horizon costs 42.1%, and refitting daily for a month buys 0.3% for 28× the compute. Both premises the project was built on, refuted | [code](https://github.com/aghasalim/forecast-backtest) |
+| **M4 prediction intervals** | Forecasting where the interval is the deliverable and none of mine were honest: nothing reaches its nominal 95% coverage, the best is 86.6%, and the unreported seasonal-naive baseline wins outright at 0.843 OWA | [code](https://github.com/aghasalim/m4-forecasting) |
 | **SpuriousAD** | A planted-confound anomaly benchmark built to prove heatmaps land on the wrong region. Image AUROC stays 1.000 at every correlation level — but the ablation showed the apparent faithfulness collapse was an artefact, and label correlation contributes nothing | [code](https://github.com/aghasalim/spurious-ad) |
 | **GraphCiteFaith** | Does an LLM narrating a GNN explanation describe the subgraph it was given, or the answer it was told? Citation validity is 1.000 across 192 narrations while one model names the correct structure 33% of the time | [code](https://github.com/aghasalim/graph-cite-faith) |
 | **DriftHarm** | Six drift detectors ranked on whether their alerts predict real harm, not distribution change. Harm-precision spans 0.512–0.593 against a 0.517 base rate, and re-labelling harm to count a 3% high-risk segment moves the winner from first to last | [code](https://github.com/aghasalim/drift-harm) |
 | **RingFaith** | Planted collusion rings across four topologies: raw explainer overlap correlates r=+0.945 with its own random baseline, so correcting for the null inverts the trend. Four of sixteen cells hold AUC above 0.70 with ring recall under 0.20 | [code](https://github.com/aghasalim/ring-faith) |
 | **LeakGraph** | Transductive-leakage audit across 5 datasets and 10 seeds. Only 5 of 10 GNN cells resolve above noise, and a density control shows the headline metric mostly measures training-graph size rather than leakage — squirrel has 36.2% of test nodes with a train twin yet the duplicate component stays under 1pp | [code](https://github.com/aghasalim/leak-graph) |
-| **Drone urban navigation** | Autonomous navigation coursework — perception and path planning | — |
+| **Drone urban navigation** | Autonomous navigation coursework for dense urban areas, where GPS alone degrades from signal occlusion and moving obstacles — sensor fusion over LiDAR and camera with learned path planning. No evaluation I would quote here | — |
 | **RFID + face attendance terminal** | Two-factor identity check on Raspberry Pi + Arduino, fully offline | [build guide](https://www.instructables.com/Build-Your-Own-RFID-Face-Recognition-Attendance-Sy/) |
 
 ## 📄 Background & awards
