@@ -17,7 +17,7 @@ CI against its source — including the ones that make me look bad.
 
 ## 💼 Projects
 
-Thirteen repositories, five with live demos. Each one's README carries the full
+Sixteen repositories, five with live demos. Each one's README carries the full
 reasoning — the methodology, the failures, and the numbers I would rather state
 myself than have a reviewer find.
 
@@ -36,6 +36,9 @@ myself than have a reviewer find.
 | **Offline vs online metrics** | Where offline ranking gains and online lift disagree: a respectable-looking AUC of 0.5386 next to what the policy actually earns in simulation | [code](https://github.com/aghasalim/recsys-offline-online) |
 | **SpuriousAD** | A planted-confound anomaly benchmark built to prove heatmaps land on the wrong region. Image AUROC stays 1.000 at every correlation level — but the ablation showed the apparent faithfulness collapse was an artefact, and label correlation contributes nothing | [code](https://github.com/aghasalim/spurious-ad) |
 | **GraphCiteFaith** | Does an LLM narrating a GNN explanation describe the subgraph it was given, or the answer it was told? Citation validity is 1.000 across 192 narrations while one model names the correct structure 33% of the time | [code](https://github.com/aghasalim/graph-cite-faith) |
+| **DriftHarm** | Six drift detectors ranked on whether their alerts predict real harm, not distribution change. Harm-precision spans 0.512–0.593 against a 0.517 base rate, and re-labelling harm to count a 3% high-risk segment moves the winner from first to last | [code](https://github.com/aghasalim/drift-harm) |
+| **RingFaith** | Planted collusion rings across four topologies: raw explainer overlap correlates r=+0.945 with its own random baseline, so correcting for the null inverts the trend. Four of sixteen cells hold AUC above 0.70 with ring recall under 0.20 | [code](https://github.com/aghasalim/ring-faith) |
+| **LeakGraph** | Transductive-leakage audit across 5 datasets and 10 seeds. Only 5 of 10 GNN cells resolve above noise, and a density control shows the headline metric mostly measures training-graph size rather than leakage — squirrel has 36.2% of test nodes with a train twin yet the duplicate component stays under 1pp | [code](https://github.com/aghasalim/leak-graph) |
 | **Drone urban navigation** | Autonomous navigation coursework — perception and path planning | — |
 | **RFID + face attendance terminal** | Two-factor identity check on Raspberry Pi + Arduino, fully offline | [build guide](https://www.instructables.com/Build-Your-Own-RFID-Face-Recognition-Attendance-Sy/) |
 
