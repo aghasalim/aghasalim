@@ -1,0 +1,30 @@
+name: keep demos awake
+
+# Streamlit Community Cloud sleeps a free app after about a week of inactivity.
+# Waking one takes ~50s and shows "this app has gone to sleep" first, which is
+# not what a recruiter following a profile link should meet. Every 3 days is
+# comfortably inside the window.
+on:
+  schedule:
+    - cron: "0 6 */3 * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: install playwright
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium
+
+      # A real browser, not curl: a sleeping app serves the same HTTP 303 and
+      # the same HTML shell as a running one, so curl cannot tell them apart
+      # and cannot wake anything.
+      - name: load every demo like a visitor would
+        run: python scripts/ping_demos.py
