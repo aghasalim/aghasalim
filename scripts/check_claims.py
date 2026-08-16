@@ -81,9 +81,17 @@ def sections(text: str) -> list[tuple[str, str]]:
     checked against that one project -- reporting drift for ten repos whose
     numbers are fine.
     """
+    # A one-line entry is a third kind of block, and the one the profile now
+    # uses: "**[Name](repo-url)** — finding". It is exactly a table row without
+    # the pipes, so it is collected the same way. Added after the profile
+    # dropped its tables and this parser reported "no linked project sections
+    # found" -- a checker that silently verifies nothing is worse than a broken
+    # one, so it fails loudly and this keeps it fed.
     table_rows, prose_lines = [], []
     for line in text.splitlines():
-        if line.lstrip().startswith("|") and REPO_LINK.search(line):
+        stripped = line.lstrip()
+        one_liner = stripped.startswith("**[") and REPO_LINK.search(line)
+        if (stripped.startswith("|") or one_liner) and REPO_LINK.search(line):
             table_rows.append(line)
         else:
             prose_lines.append(line)
