@@ -45,12 +45,20 @@ myself than have a reviewer find.
 | **Drone urban navigation** | Autonomous navigation coursework for dense urban areas, where GPS alone degrades from signal occlusion and moving obstacles — sensor fusion over LiDAR and camera with learned path planning. No evaluation I would quote here | — |
 | **RFID + face attendance terminal** | Two-factor identity check on Raspberry Pi + Arduino, fully offline | [build guide](https://www.instructables.com/Build-Your-Own-RFID-Face-Recognition-Attendance-Sy/) |
 
-## 📄 Background & awards
+## 🏅 Achievements
 
-Third-year B.Sc. Artificial Intelligence at Howest. Gold medal at the International
-STEM Olympiad in mathematics (France, 2022) and bronze in German (Germany, 2023). Four
-years teaching programming at STEP IT Academy, roughly 200 students. Azerbaijani,
-English, Turkish, German, and learning Dutch.
+| | |
+|---|---|
+| **Gold medal, International STEM Olympiad** | Mathematics, France 2022 |
+| **Bronze medal, International STEM Olympiad** | German, Germany 2023 |
+| **0.9086 private leaderboard**, IEEE-CIS Fraud Detection | Scored by Kaggle against held-out labels I never saw — the one number here I could not have talked my way into |
+| **Taught ~200 students over four years** | Programming, STEP IT Academy |
+| **Published hardware build guide** | [RFID + face-recognition attendance system](https://www.instructables.com/Build-Your-Own-RFID-Face-Recognition-Attendance-Sy/), Instructables |
+| **173 of 204 commits** on a 3-person client platform | Smart IVC cage — full stack, firmware to frontend |
+| **ORCID** | [0009-0001-8746-4582](https://orcid.org/0009-0001-8746-4582) |
+
+Third-year B.Sc. Artificial Intelligence at Howest, Kortrijk. Azerbaijani, English,
+Turkish, German, and learning Dutch.
 
 ## 🛠️ Tech stack
 
