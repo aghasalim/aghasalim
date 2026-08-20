@@ -89,7 +89,12 @@ def sections(text: str) -> list[tuple[str, str]]:
     # one, so it fails loudly and this keeps it fed.
     table_rows, prose_lines = [], []
     for line in text.splitlines():
-        stripped = line.lstrip()
+        # Drop a leading markdown bullet ("- ", "* ", "+ ") before testing shape,
+        # so a bulleted one-liner "- **[Name](url)** — finding" is recognised the
+        # same as an unbulleted one. Added when the profile moved its selected
+        # work into a bullet list and this parser stopped seeing any project
+        # block at all -- a checker that verifies nothing must fail loud, and did.
+        stripped = re.sub(r"^[-*+]\s+", "", line.lstrip())
         one_liner = stripped.startswith("**[") and REPO_LINK.search(line)
         if (stripped.startswith("|") or one_liner) and REPO_LINK.search(line):
             table_rows.append(line)
