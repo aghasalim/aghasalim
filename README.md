@@ -30,11 +30,11 @@
 
 ## 🔬 Selected work
 
-- **[SpuriousAD](https://github.com/aghasalim/spurious-ad)** — built this to prove anomaly detectors point at the wrong thing. Turns out they mostly don't, checked it on real MVTec images too.
-- **[EU AI Act RAG](https://github.com/aghasalim/eu-ai-act-rag)**: Q&A over the actual regulation text. **90.2%** faithfulness, graded by a different model so it's not marking its own work. [demo](https://eu-ai-act-rag-eval.streamlit.app/)
-- **[Fraud decision trail](https://github.com/aghasalim/ieee-fraud-ml)** — worked a Kaggle competition end to end. **0.1044 AUC** is the gap between the split that looks good and the one you can trust. [demo](https://ieee-fraud-ml.streamlit.app/)
-- **[Groundcheck](https://github.com/aghasalim/groundcheck-mcp)** — checks if a claim is actually grounded (real quote, real citation, real code output), no second model doing the judging. Works with Claude and Gemini.
-- 19 repos total, [rest of them here](https://github.com/aghasalim?tab=repositories) — a lot of them built to prove one thing and ended up proving the opposite.
+- **[SpuriousAD](https://github.com/aghasalim/spurious-ad)** — wanted to know if anomaly detectors are actually looking at the anomaly or cheating off a shortcut in the data. Mostly cheating, even on real MVTec images.
+- **[EU AI Act RAG](https://github.com/aghasalim/eu-ai-act-rag)** — RAG over the actual regulation text, graded by a model that isn't the one answering. **90.2%** faithful. [demo](https://eu-ai-act-rag-eval.streamlit.app/)
+- **[Fraud decision trail](https://github.com/aghasalim/ieee-fraud-ml)** — did the IEEE-CIS Kaggle set the honest way instead of the version that leaks future data. **0.1044 AUC** is what that difference actually costs you. [demo](https://ieee-fraud-ml.streamlit.app/)
+- **[Groundcheck](https://github.com/aghasalim/groundcheck-mcp)** — an MCP tool so Claude or Gemini can check if a quote, citation, or number is real without asking another model to vouch for it.
+- 19 repos in total, [rest are here](https://github.com/aghasalim?tab=repositories) — most of them started because I didn't trust something I'd assumed.
 
 ## 🏅 A few things
 
