@@ -7,12 +7,9 @@
 </p>
 
 <p align="center">
-  Third-year B.Sc. Artificial Intelligence at Howest, Kortrijk 🇧🇪 — anomaly
-  detection and model interpretability. I keep asking one question: does a method
-  that looks good on a benchmark still hold up once it has to make a decision?
-  <br><br>
-  Every number in my repos is measured, reproducible from its source, and
-  re-checked weekly by CI — including the ones that make me look bad.
+  Third-year AI student at Howest, Belgium 🇧🇪. I work on anomaly detection and
+  model interpretability. I like results that hold up outside the benchmark, so
+  the numbers in my repos are measured, reproducible, and checked by CI.
   <br>
   <b>Open to AI &amp; backend internships.</b>
 </p>
@@ -30,6 +27,16 @@
   LightGBM · Transformers · SHAP &nbsp;•&nbsp; FastAPI · React · Streamlit ·
   Docker · GitHub Actions · PostgreSQL · Raspberry Pi · Arduino
 </sub></p>
+
+## 📊 GitHub
+
+<p align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=aghasalim&show_icons=true&hide_border=true&count_private=true" alt="stats">
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aghasalim&layout=compact&hide_border=true&langs_count=8" alt="top languages">
+</p>
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=aghasalim&hide_border=true" alt="streak">
+</p>
 
 ## 🔬 Selected work
 
