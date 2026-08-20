@@ -7,9 +7,9 @@
 </p>
 
 <p align="center">
-  Third-year AI student at Howest, Belgium 🇧🇪. I work on anomaly detection and
-  model interpretability. I like results that hold up outside the benchmark, so
-  the numbers in my repos are measured, reproducible, and checked by CI.
+  3rd-year AI student at Howest, Belgium 🇧🇪. Mostly anomaly detection and
+  interpretability — I get suspicious of results that only work on the
+  benchmark, so I try to check my own numbers before anyone else does.
   <br>
   <b>Open to AI &amp; backend internships.</b>
 </p>
@@ -22,12 +22,6 @@
   <img src="https://skillicons.dev/icons?i=docker,githubactions,postgres,sqlite,git,arduino,raspberrypi,linux&perline=8" alt="infra and tools">
 </p>
 
-<p align="center"><sub>
-  Python · TypeScript · C++ · SQL · Bash &nbsp;•&nbsp; PyTorch · scikit-learn ·
-  LightGBM · Transformers · SHAP &nbsp;•&nbsp; FastAPI · React · Streamlit ·
-  Docker · GitHub Actions · PostgreSQL · Raspberry Pi · Arduino
-</sub></p>
-
 ## 🔬 Selected work
 
 - **[SpuriousAD](https://github.com/aghasalim/spurious-ad)** — wanted to know if anomaly detectors are actually looking at the anomaly or cheating off a shortcut in the data. Mostly cheating, even on real MVTec images.
@@ -38,9 +32,10 @@
 
 ## 🏅 A few things
 
-Gold medal, International STEM Olympiad (mathematics, 2022) · **0.9086** on the
-IEEE-CIS private leaderboard, scored by Kaggle against labels I never saw ·
-taught ~200 students over four years · ORCID [0009-0001-8746-4582](https://orcid.org/0009-0001-8746-4582).
+Gold medal at the International STEM Olympiad (math, 2022). Scored **0.9086**
+on the IEEE-CIS private leaderboard — Kaggle graded that against labels I
+never got to see. Taught close to 200 students over four years. ORCID:
+[0009-0001-8746-4582](https://orcid.org/0009-0001-8746-4582).
 
 ## 📫 Reach me
 
