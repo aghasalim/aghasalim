@@ -28,19 +28,13 @@
   Docker · GitHub Actions · PostgreSQL · Raspberry Pi · Arduino
 </sub></p>
 
-## 📊 GitHub
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=aghasalim&hide_border=true" alt="streak">
-</p>
-
 ## 🔬 Selected work
 
-- **[SpuriousAD](https://github.com/aghasalim/spurious-ad)** — a planted-confound anomaly benchmark that refuted its own premise, replicated on real MVTec images
-- **[EU AI Act RAG](https://github.com/aghasalim/eu-ai-act-rag)** — QA over Regulation (EU) 2024/1689 where the evaluation is the project: **90.2%** faithfulness, graded by a separate model family · [demo](https://eu-ai-act-rag-eval.streamlit.app/)
-- **[Fraud decision trail](https://github.com/aghasalim/ieee-fraud-ml)** — IEEE-CIS end to end; **0.1044 AUC** separates the honest split from the flattering one · [demo](https://ieee-fraud-ml.streamlit.app/)
-- **[Groundcheck](https://github.com/aghasalim/groundcheck-mcp)** — an MCP connector that verifies a claim's grounding with no LLM in the loop, for Claude and Gemini
-- **[More →](https://github.com/aghasalim?tab=repositories)** &nbsp;(19 repositories, five with live demos — most built to prove something, then made to refute their own premise)
+- **[SpuriousAD](https://github.com/aghasalim/spurious-ad)** — built this to prove anomaly detectors point at the wrong thing. Turns out they mostly don't, checked it on real MVTec images too.
+- **[EU AI Act RAG](https://github.com/aghasalim/eu-ai-act-rag)**: Q&A over the actual regulation text. **90.2%** faithfulness, graded by a different model so it's not marking its own work. [demo](https://eu-ai-act-rag-eval.streamlit.app/)
+- **[Fraud decision trail](https://github.com/aghasalim/ieee-fraud-ml)** — worked a Kaggle competition end to end. **0.1044 AUC** is the gap between the split that looks good and the one you can trust. [demo](https://ieee-fraud-ml.streamlit.app/)
+- **[Groundcheck](https://github.com/aghasalim/groundcheck-mcp)** — checks if a claim is actually grounded (real quote, real citation, real code output), no second model doing the judging. Works with Claude and Gemini.
+- 19 repos total, [rest of them here](https://github.com/aghasalim?tab=repositories) — a lot of them built to prove one thing and ended up proving the opposite.
 
 ## 🏅 A few things
 
