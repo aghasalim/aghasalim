@@ -34,7 +34,7 @@
 
 Gold medal at the International STEM Olympiad (math, 2022). Scored **0.9086**
 on the IEEE-CIS private leaderboard — [Kaggle](https://www.kaggle.com/aghasalimmustafazada)
-graded that against labels I never got to see. Taught close to 200 students over four years. ORCID:
+graded that against labels I never got to see. ORCID:
 [0009-0001-8746-4582](https://orcid.org/0009-0001-8746-4582).
 
 ## 📫 Reach me
