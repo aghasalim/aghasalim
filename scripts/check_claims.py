@@ -22,6 +22,7 @@ having no check at all.
 """
 from __future__ import annotations
 
+import json
 import re
 import sys
 import urllib.error
@@ -113,6 +114,41 @@ def sections(text: str) -> list[tuple[str, str]]:
     return out
 
 
+REPO_COUNT = re.compile(r"(\d+)\s+repos in total")
+
+
+def check_repo_count(profile: str) -> list[str]:
+    """Verify the repository count the profile advertises.
+
+    This claim drifted unnoticed: the profile said 19 while the account held 25
+    own, public, non-fork repositories. Every other number here is checked against
+    its source repo, and this one was not checked against anything -- which is
+    exactly the failure the page is about.
+    """
+    match = REPO_COUNT.search(profile)
+    if not match:
+        return []
+    claimed = int(match.group(1))
+    try:
+        with urllib.request.urlopen(
+            urllib.request.Request(
+                f"https://api.github.com/users/{OWNER}/repos?per_page=100&type=owner",
+                headers={"User-Agent": "check-claims"},
+            ),
+            timeout=20,
+        ) as response:
+            repos = json.load(response)
+    except Exception as exc:
+        print(f"  repo count: could not verify ({type(exc).__name__})")
+        return []
+
+    actual = sum(1 for r in repos if not r.get("fork") and not r.get("private"))
+    if actual != claimed:
+        return [f"profile says {claimed} repos, the account has {actual}"]
+    print(f"  OK  repo count: {actual}")
+    return []
+
+
 def main() -> int:
     profile = PROFILE.read_text(encoding="utf-8")
     blocks = sections(profile)
@@ -120,7 +156,7 @@ def main() -> int:
         print("no linked project sections found -- check the parser")
         return 1
 
-    failures, checked = [], 0
+    failures, checked = check_repo_count(profile), 0
     for repo, block in blocks:
         figures = sorted(set(FIGURE.findall(block)) - ALLOW.get(repo, set()))
         if not figures:
