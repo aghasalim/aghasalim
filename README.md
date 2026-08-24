@@ -33,8 +33,8 @@
 ## 🏅 A few things
 
 Gold medal at the International STEM Olympiad (math, 2022). Scored **0.9086**
-on the IEEE-CIS private leaderboard — Kaggle graded that against labels I
-never got to see. Taught close to 200 students over four years. ORCID:
+on the IEEE-CIS private leaderboard — [Kaggle](https://www.kaggle.com/aghasalimmustafazada)
+graded that against labels I never got to see. Taught close to 200 students over four years. ORCID:
 [0009-0001-8746-4582](https://orcid.org/0009-0001-8746-4582).
 
 ## 📫 Reach me
@@ -44,6 +44,8 @@ never got to see. Taught close to 200 students over four years. ORCID:
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="email"></a>
   <a href="https://linkedin.com/in/mustafazada">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin"></a>
+  <a href="https://www.kaggle.com/aghasalimmustafazada">
+    <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" alt="kaggle"></a>
   <a href="https://orcid.org/0009-0001-8746-4582">
     <img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="orcid"></a>
 </p>
