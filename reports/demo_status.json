@@ -1,0 +1,65 @@
+{
+ "checked_at": "2026-08-24T09:08:53.453907+00:00",
+ "demos": [
+  {
+   "demo": "explainable-defect-detector",
+   "url": "https://explainable-defect-detector.streamlit.app/",
+   "was_asleep": false,
+   "woken": false,
+   "ok": true,
+   "chars": 767,
+   "thin": false,
+   "seconds": 17.7,
+   "title": "Explainable Defect Detector \u00b7 Streamlit",
+   "attempts": 1
+  },
+  {
+   "demo": "eu-ai-act-rag",
+   "url": "https://eu-ai-act-rag-eval.streamlit.app/",
+   "was_asleep": false,
+   "woken": false,
+   "ok": true,
+   "chars": 943,
+   "thin": false,
+   "seconds": 17.8,
+   "title": "EU AI Act RAG \u00b7 Streamlit",
+   "attempts": 1
+  },
+  {
+   "demo": "ieee-fraud-ml",
+   "url": "https://ieee-fraud-ml.streamlit.app/",
+   "was_asleep": false,
+   "woken": false,
+   "ok": true,
+   "chars": 1506,
+   "thin": false,
+   "seconds": 17.2,
+   "title": "Fraud predictor \u00b7 Streamlit",
+   "attempts": 1
+  },
+  {
+   "demo": "rl-arm-reward-shaping",
+   "url": "https://rl-arm-reward-shaping.streamlit.app/",
+   "was_asleep": false,
+   "woken": false,
+   "ok": true,
+   "chars": 1524,
+   "thin": false,
+   "seconds": 17.4,
+   "title": "RL reward shaping \u2014 2-link arm \u00b7 Streamlit",
+   "attempts": 1
+  },
+  {
+   "demo": "vlm-hallucination-eval",
+   "url": "https://vlm-hallucination-eval.streamlit.app/",
+   "was_asleep": false,
+   "woken": false,
+   "ok": true,
+   "chars": 543,
+   "thin": false,
+   "seconds": 17.5,
+   "title": "Hallucination-aware captioning \u00b7 Streamlit",
+   "attempts": 1
+  }
+ ]
+}

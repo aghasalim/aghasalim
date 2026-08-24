@@ -46,6 +46,20 @@ APP_FRAME = 'iframe[title="streamlitApp"]'
 APP_READY = '[data-testid="stApp"]'
 WAKE_TIMEOUT_MS = 120_000
 
+# Clicking the wake button replaces the Zzzz screen with a "spinning up" screen,
+# and the streamlitApp iframe does not exist during it. On a cold wake that gap
+# ran past the 60s I first allowed here: the 2026-08-22 run failed eu-ai-act-rag
+# at exactly 63.0s, which is goto + the 12s Zzzz probe + a 60s frame wait that
+# expired. The app was healthy the whole time. A woken app therefore gets the
+# full wake budget to produce its frame, and a warm one keeps the short wait.
+FRAME_TIMEOUT_WARM_MS = 60_000
+ATTEMPTS = 2
+
+# Content settle: poll up to 24s for the app to paint something.
+SETTLE_STEP_MS = 3_000
+SETTLE_POLLS = 8
+CONTENT_FLOOR = 40
+
 
 def check(page, name: str, url: str) -> dict:
     t0 = datetime.now(UTC)
@@ -60,16 +74,29 @@ def check(page, name: str, url: str) -> dict:
         pass  # not asleep, or it woke before we looked
 
     try:
-        page.wait_for_selector(APP_FRAME, timeout=60_000)
+        frame_timeout = WAKE_TIMEOUT_MS if row["was_asleep"] else FRAME_TIMEOUT_WARM_MS
+        page.wait_for_selector(APP_FRAME, timeout=frame_timeout)
         app = page.frame_locator(APP_FRAME).locator(APP_READY)
         app.wait_for(state="attached", timeout=WAKE_TIMEOUT_MS)
-        # the container attaches before the first script run finishes
-        page.wait_for_timeout(4_000)
+        # The container attaches well before the first script run paints. A flat
+        # 4s wait was not enough: the 2026-08-24 run passed
+        # explainable-defect-detector at 9 chars with the generic "Streamlit"
+        # title, i.e. an empty shell scored as healthy. Poll instead, and stop as
+        # soon as there is real text rather than always paying the full budget.
+        body = page.frame_locator(APP_FRAME).locator("body")
+        chars = 0
+        for _ in range(SETTLE_POLLS):
+            page.wait_for_timeout(SETTLE_STEP_MS)
+            chars = len(body.inner_text(timeout=20_000))
+            if chars >= CONTENT_FLOOR:
+                break
         row["ok"] = True
         row["woken"] = row["was_asleep"]
-        # prove the app rendered its own content, not just an empty container
-        row["chars"] = len(page.frame_locator(APP_FRAME)
-                           .locator("body").inner_text(timeout=20_000))
+        row["chars"] = chars
+        # Not a failure: some demos legitimately render very little above the
+        # fold. It is flagged so a genuinely blank wake is visible instead of
+        # sitting behind a green tick.
+        row["thin"] = chars < CONTENT_FLOOR
     except Exception as e:
         row["ok"] = False
         row["error"] = type(e).__name__
@@ -84,14 +111,22 @@ def main() -> int:
     with sync_playwright() as p:
         browser = p.chromium.launch()
         for name, url in DEMOS.items():
-            ctx = browser.new_context()
-            page = ctx.new_page()
-            try:
-                rows.append(check(page, name, url))
-            except Exception as e:
-                rows.append({"demo": name, "url": url, "ok": False,
-                             "error": f"{type(e).__name__}: {e}"[:200]})
-            ctx.close()
+            # Waking is racy by nature, so one failure is not yet a dead demo.
+            # Each attempt gets a clean context; the second starts against an
+            # app the first has already nudged awake.
+            for attempt in range(1, ATTEMPTS + 1):
+                ctx = browser.new_context()
+                page = ctx.new_page()
+                try:
+                    row = check(page, name, url)
+                except Exception as e:
+                    row = {"demo": name, "url": url, "ok": False,
+                           "error": f"{type(e).__name__}: {e}"[:200]}
+                ctx.close()
+                row["attempts"] = attempt
+                if row.get("ok") or attempt == ATTEMPTS:
+                    rows.append(row)
+                    break
         browser.close()
 
     print(f"{'demo':30} {'status':>10} {'asleep?':>9} {'secs':>7}  "
@@ -105,8 +140,12 @@ def main() -> int:
 
     woke = [r["demo"] for r in rows if r.get("was_asleep")]
     dead = [r["demo"] for r in rows if not r.get("ok")]
+    thin = [r["demo"] for r in rows if r.get("ok") and r.get("thin")]
     if woke:
         print(f"\nwoke {len(woke)}: {', '.join(woke)}")
+    if thin:
+        print(f"\nTHIN (rendered under {CONTENT_FLOOR} chars, check by hand): "
+              f"{', '.join(thin)}")
     if dead:
         print(f"\nCOULD NOT WAKE {len(dead)}: {', '.join(dead)}")
 
