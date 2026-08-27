@@ -44,6 +44,8 @@ graded that against labels I never got to see. ORCID:
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="email"></a>
   <a href="https://linkedin.com/in/mustafazada">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin"></a>
+  <a href="https://aghasalim.github.io/">
+    <img src="https://img.shields.io/badge/Website-222222?style=for-the-badge&logo=githubpages&logoColor=white" alt="website"></a>
   <a href="https://www.kaggle.com/aghasalimmustafazada">
     <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" alt="kaggle"></a>
   <a href="https://orcid.org/0009-0001-8746-4582">
