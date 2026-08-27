@@ -47,8 +47,6 @@ Most of them started because I did not trust something I had assumed.
 
 ## Tools
 
-![](https://skillicons.dev/icons?i=py,cpp,pytorch,sklearn,fastapi,docker,githubactions,postgres,linux,git&theme=light&perline=10)
-
 Python, C++, SQL, Bash. PyTorch, scikit-learn, LightGBM, Transformers, SHAP.
 FastAPI, Streamlit, Docker, GitHub Actions, PostgreSQL, Raspberry Pi, Arduino.
 
