@@ -1,53 +1,47 @@
-<h1 align="center">Aghasalim Mustafazada</h1>
+# Aghasalim Mustafazada
 
-<p align="center">
-  <a href="https://github.com/aghasalim/aghasalim/actions/workflows/check-claims.yml">
-    <img src="https://github.com/aghasalim/aghasalim/actions/workflows/check-claims.yml/badge.svg" alt="claims checked">
-  </a>
-</p>
+Third year AI student at Howest, Belgium. Mostly anomaly detection and
+interpretability. I get suspicious of results that only work on the benchmark,
+so I try to check my own numbers before anyone else does. The badge below is a
+CI job that reads the figures on this page and fails if they no longer match the
+repositories they came from.
 
-<p align="center">
-  3rd-year AI student at Howest, Belgium 🇧🇪. Mostly anomaly detection and
-  interpretability, I get suspicious of results that only work on the
-  benchmark, so I try to check my own numbers before anyone else does.
-  <br>
-  <b>Open to AI &amp; backend internships.</b>
-</p>
+Open to AI and backend internships.
 
-## 🧰 Languages &amp; tools
+[![claims checked](https://github.com/aghasalim/aghasalim/actions/workflows/check-claims.yml/badge.svg)](https://github.com/aghasalim/aghasalim/actions/workflows/check-claims.yml)
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=py,ts,cpp,bash,pytorch,sklearn,fastapi,react&perline=8" alt="languages and ML">
-  <br>
-  <img src="https://skillicons.dev/icons?i=docker,githubactions,postgres,sqlite,git,arduino,raspberrypi,linux&perline=8" alt="infra and tools">
-</p>
+## Work
 
-## 🔬 Selected work
+**[SpuriousAD](https://github.com/aghasalim/spurious-ad)**: wanted to know if anomaly detectors look at the anomaly or cheat off a shortcut in the data. Mostly cheating, even on real MVTec images.
 
-- **[SpuriousAD](https://github.com/aghasalim/spurious-ad)**: wanted to know if anomaly detectors are actually looking at the anomaly or cheating off a shortcut in the data. Mostly cheating, even on real MVTec images.
-- **[EU AI Act RAG](https://github.com/aghasalim/eu-ai-act-rag)**: RAG over the actual regulation text, graded by a model that isn't the one answering. **90.2%** faithful. [demo](https://eu-ai-act-rag-eval.streamlit.app/)
-- **[Fraud decision trail](https://github.com/aghasalim/ieee-fraud-ml)**: did the IEEE-CIS Kaggle set the honest way instead of the version that leaks future data. **0.1044 AUC** is what that difference actually costs you. [demo](https://ieee-fraud-ml.streamlit.app/)
-- **[Groundcheck](https://github.com/aghasalim/groundcheck-mcp)**: an MCP tool so Claude or Gemini can check if a quote, citation, or number is real without asking another model to vouch for it.
-- 34 repos in total, [rest are here](https://github.com/aghasalim?tab=repositories), most of them started because I did not trust something I had assumed.
+**[EU AI Act RAG](https://github.com/aghasalim/eu-ai-act-rag)**: retrieval over the actual regulation text, graded by a model that is not the one answering. **90.2%** faithful. [demo](https://eu-ai-act-rag-eval.streamlit.app/)
 
-## 🏅 A few things
+**[Fraud decision trail](https://github.com/aghasalim/ieee-fraud-ml)**: the IEEE-CIS Kaggle set done the honest way instead of the version that leaks future data. **0.1044 AUC** is what that difference costs. [demo](https://ieee-fraud-ml.streamlit.app/)
 
-Gold medal at the International STEM Olympiad (math, 2022). Scored **0.9086**
-on the IEEE-CIS private leaderboard, [Kaggle](https://www.kaggle.com/aghasalimmustafazada)
-graded that against labels I never got to see. ORCID:
-[0009-0001-8746-4582](https://orcid.org/0009-0001-8746-4582).
+**[Groundcheck](https://github.com/aghasalim/groundcheck-mcp)**: an MCP tool so Claude or Gemini can check whether a quote, citation or number is real, without asking another model to vouch for it.
 
-## 📫 Reach me
+**[ai-systems-from-scratch](https://github.com/aghasalim/ai-systems-from-scratch)**: seven pieces of modern AI rebuilt from the papers, each with a test suite, measured benchmarks and a logbook of what went wrong. FlashAttention, latent diffusion, RLHF, rectified flow, Schrodinger bridges, multi-head latent attention, world models.
 
-<p align="center">
-  <a href="mailto:salim.mustafazada@student.howest.be">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="email"></a>
-  <a href="https://linkedin.com/in/mustafazada">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin"></a>
-  <a href="https://aghasalim.github.io/">
-    <img src="https://img.shields.io/badge/Website-222222?style=for-the-badge&logo=githubpages&logoColor=white" alt="website"></a>
-  <a href="https://www.kaggle.com/aghasalimmustafazada">
-    <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" alt="kaggle"></a>
-  <a href="https://orcid.org/0009-0001-8746-4582">
-    <img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="orcid"></a>
-</p>
+34 repos in total, [the rest are here](https://github.com/aghasalim?tab=repositories).
+Most of them started because I did not trust something I had assumed.
+
+## Tools
+
+Python, C++, SQL, Bash. PyTorch, scikit-learn, LightGBM, Transformers, SHAP.
+FastAPI, Streamlit, Docker, GitHub Actions, PostgreSQL, Raspberry Pi, Arduino.
+
+## Other
+
+Gold medal at the International STEM Olympiad in mathematics, 2022. Scored
+**0.9086** on the IEEE-CIS private leaderboard, which
+[Kaggle](https://www.kaggle.com/aghasalimmustafazada) graded against labels I never
+got to see.
+
+## Contact
+
+salim.mustafazada@student.howest.be
+
+[Website](https://aghasalim.github.io/) ·
+[LinkedIn](https://linkedin.com/in/mustafazada) ·
+[Kaggle](https://www.kaggle.com/aghasalimmustafazada) ·
+[ORCID](https://orcid.org/0009-0001-8746-4582)
