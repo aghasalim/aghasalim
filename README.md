@@ -8,7 +8,7 @@
 
 <p align="center">
   3rd-year AI student at Howest, Belgium 🇧🇪. Mostly anomaly detection and
-  interpretability — I get suspicious of results that only work on the
+  interpretability, I get suspicious of results that only work on the
   benchmark, so I try to check my own numbers before anyone else does.
   <br>
   <b>Open to AI &amp; backend internships.</b>
@@ -24,16 +24,16 @@
 
 ## 🔬 Selected work
 
-- **[SpuriousAD](https://github.com/aghasalim/spurious-ad)** — wanted to know if anomaly detectors are actually looking at the anomaly or cheating off a shortcut in the data. Mostly cheating, even on real MVTec images.
-- **[EU AI Act RAG](https://github.com/aghasalim/eu-ai-act-rag)** — RAG over the actual regulation text, graded by a model that isn't the one answering. **90.2%** faithful. [demo](https://eu-ai-act-rag-eval.streamlit.app/)
-- **[Fraud decision trail](https://github.com/aghasalim/ieee-fraud-ml)** — did the IEEE-CIS Kaggle set the honest way instead of the version that leaks future data. **0.1044 AUC** is what that difference actually costs you. [demo](https://ieee-fraud-ml.streamlit.app/)
-- **[Groundcheck](https://github.com/aghasalim/groundcheck-mcp)** — an MCP tool so Claude or Gemini can check if a quote, citation, or number is real without asking another model to vouch for it.
+- **[SpuriousAD](https://github.com/aghasalim/spurious-ad)**: wanted to know if anomaly detectors are actually looking at the anomaly or cheating off a shortcut in the data. Mostly cheating, even on real MVTec images.
+- **[EU AI Act RAG](https://github.com/aghasalim/eu-ai-act-rag)**: RAG over the actual regulation text, graded by a model that isn't the one answering. **90.2%** faithful. [demo](https://eu-ai-act-rag-eval.streamlit.app/)
+- **[Fraud decision trail](https://github.com/aghasalim/ieee-fraud-ml)**: did the IEEE-CIS Kaggle set the honest way instead of the version that leaks future data. **0.1044 AUC** is what that difference actually costs you. [demo](https://ieee-fraud-ml.streamlit.app/)
+- **[Groundcheck](https://github.com/aghasalim/groundcheck-mcp)**: an MCP tool so Claude or Gemini can check if a quote, citation, or number is real without asking another model to vouch for it.
 - 33 repos in total, [rest are here](https://github.com/aghasalim?tab=repositories), most of them started because I did not trust something I had assumed.
 
 ## 🏅 A few things
 
 Gold medal at the International STEM Olympiad (math, 2022). Scored **0.9086**
-on the IEEE-CIS private leaderboard — [Kaggle](https://www.kaggle.com/aghasalimmustafazada)
+on the IEEE-CIS private leaderboard, [Kaggle](https://www.kaggle.com/aghasalimmustafazada)
 graded that against labels I never got to see. ORCID:
 [0009-0001-8746-4582](https://orcid.org/0009-0001-8746-4582).
 
