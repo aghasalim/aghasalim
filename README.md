@@ -28,7 +28,7 @@
 - **[EU AI Act RAG](https://github.com/aghasalim/eu-ai-act-rag)**: RAG over the actual regulation text, graded by a model that isn't the one answering. **90.2%** faithful. [demo](https://eu-ai-act-rag-eval.streamlit.app/)
 - **[Fraud decision trail](https://github.com/aghasalim/ieee-fraud-ml)**: did the IEEE-CIS Kaggle set the honest way instead of the version that leaks future data. **0.1044 AUC** is what that difference actually costs you. [demo](https://ieee-fraud-ml.streamlit.app/)
 - **[Groundcheck](https://github.com/aghasalim/groundcheck-mcp)**: an MCP tool so Claude or Gemini can check if a quote, citation, or number is real without asking another model to vouch for it.
-- 33 repos in total, [rest are here](https://github.com/aghasalim?tab=repositories), most of them started because I did not trust something I had assumed.
+- 34 repos in total, [rest are here](https://github.com/aghasalim?tab=repositories), most of them started because I did not trust something I had assumed.
 
 ## 🏅 A few things
 
