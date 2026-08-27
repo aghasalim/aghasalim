@@ -22,9 +22,8 @@ Open to AI and backend internships.
 
 **[ai-systems-from-scratch](https://github.com/aghasalim/ai-systems-from-scratch)**: seven pieces of modern AI rebuilt from the papers, each with a test suite, measured benchmarks and a logbook of what went wrong. FlashAttention, latent diffusion, RLHF, rectified flow, Schrodinger bridges, multi-head latent attention, world models.
 
-Eight repos, 98 source files, 454 tests, all open. 34 repos in total,
-[the rest are here](https://github.com/aghasalim?tab=repositories). Most of them
-started because I did not trust something I had assumed.
+34 repos in total, [the rest are here](https://github.com/aghasalim?tab=repositories).
+Most of them started because I did not trust something I had assumed.
 
 ## Tools
 
