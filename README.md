@@ -8,10 +8,12 @@ Open to AI and backend internships.
 
 ## Tools
 
-![](https://skillicons.dev/icons?i=py,cpp,pytorch,sklearn,fastapi,docker,githubactions,postgres,linux,git&theme=light&perline=10)
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=py,cpp,bash,js,html,pytorch,sklearn,fastapi,streamlit,docker&theme=light&perline=10" alt="languages, ML and services">
+  <br>
+  <img src="https://skillicons.dev/icons?i=githubactions,git,github,postgres,sqlite,linux,raspberrypi,arduino,vscode,markdown&theme=light&perline=10" alt="infrastructure and tooling">
+</p>
 
-Python, C++, SQL, Bash. PyTorch, scikit-learn, LightGBM, Transformers, SHAP.
-FastAPI, Streamlit, Docker, GitHub Actions, PostgreSQL, Raspberry Pi, Arduino.
 
 ## Other
 
