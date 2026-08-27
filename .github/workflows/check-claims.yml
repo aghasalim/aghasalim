@@ -1,0 +1,24 @@
+name: check-claims
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  # The important trigger. Drift happens when a *project* repo is re-evaluated,
+  # which does not touch this repo and so fires no push event here. Without the
+  # schedule the check would only ever run after the profile was already edited.
+  schedule:
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+jobs:
+  claims:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # Stdlib only -- no pip install, so a dependency outage cannot make this
+      # look like a claims failure.
+      - run: python scripts/check_claims.py
