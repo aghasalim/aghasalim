@@ -16,3 +16,7 @@ To bring it back: rename it to `check_claims.py`, restore
 `.github/workflows/check-claims.yml`, and keep each project line in the
 `**[Name](repo-url)**` shape on a single line, since that is what pairs a
 repository with the figures beside it.
+
+`verify/` recomputes the derived fields of `reports/demo_status.json` from the
+raw ones, in Go and in SQL, and CI fails if either disagrees with what
+`ping_demos.py` wrote. See `verify/README.md`.

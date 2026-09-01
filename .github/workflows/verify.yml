@@ -1,0 +1,43 @@
+name: verify the published status file
+
+# reports/demo_status.json is written by scripts/ping_demos.py and was never
+# read back by anything. This recomputes the parts of it that are derived
+# rather than measured, in two languages that share no code with the script,
+# and fails if they disagree.
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+
+      - name: recompute
+        run: ./verify/verify.sh
+
+      # A check nobody has seen fail is not a check. Break the file on purpose
+      # and require rejection, then put it back and require a pass.
+      - name: the checks must reject a corrupted file
+        run: |
+          cp reports/demo_status.json /tmp/demo_status.json.bak
+          python3 - <<'PY'
+          import json
+          p = "reports/demo_status.json"
+          d = json.load(open(p))
+          d["demos"][0]["thin"] = not d["demos"][0]["thin"]
+          json.dump(d, open(p, "w"), indent=1)
+          PY
+          if ./verify/verify.sh; then
+            echo "the corrupted file was accepted, so the checks verify nothing"
+            cp /tmp/demo_status.json.bak reports/demo_status.json
+            exit 1
+          fi
+          echo "rejected as it should be"
+          cp /tmp/demo_status.json.bak reports/demo_status.json
+          ./verify/verify.sh
