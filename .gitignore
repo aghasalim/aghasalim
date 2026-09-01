@@ -1,1 +1,5 @@
 .DS_Store
+
+verify/*/target/
+verify/gocheck/gocheck
+__pycache__/
