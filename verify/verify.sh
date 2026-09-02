@@ -72,8 +72,23 @@ check_sql () {
     return 0
 }
 
+check_c () {
+    cc -std=c99 -O2 -Wall -o /tmp/statusc verify/status.c -lm &&
+    /tmp/statusc "$root"
+}
+
+check_js () { node verify/status.js "$root"; }
+check_py () { python3 verify/status.py "$root"; }
+check_r  () { Rscript verify/status.R "$root"; }
+check_rb () { ruby verify/status.rb "$root"; }
+
 run "Go, structure and derived fields" go      check_go
 run "SQL, derived fields again"        sqlite3 check_sql
+run "C, derived fields"                cc      check_c
+run "JavaScript, derived fields"       node    check_js
+run "Python, derived fields"           python3 check_py
+run "R, derived fields"                Rscript check_r
+run "Ruby, derived fields"             ruby    check_rb
 
 printf '\n%s\n' "----------------------------------------"
 printf '%d passed, %d failed, %d skipped\n' "$pass" "$fail" "$skip"
