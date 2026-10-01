@@ -8,6 +8,12 @@ Open to AI and backend internships.
 
 ## Recent
 
+[offline-live-captions](https://github.com/aghasalim/offline-live-captions):
+live captions that never touch the network. Whisper turbo on an M4 gets 5.1%
+word error rate clean and 11.0% in a simulated noisy room, 1.7 seconds behind
+the speaker. The tiny model invents words in noise and passes 100% error, which
+is worse than silence for a deaf user.
+
 [one-answer-vision](https://github.com/aghasalim/one-answer-vision): for blind
 users, point the camera and get one short answer offline. A terse prompt beats
 the describe-everything prompt, 68% to 62%, with zero words before the value.
