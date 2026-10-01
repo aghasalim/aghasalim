@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="350" viewBox="0 0 720 350" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13">
+<text x="16" y="28" fill="#8b949e" font-size="15" font-weight="600">offline-live-captions: word error rate on 300 LibriSpeech test-other utterances, Apple M4</text>
+<text x="162" y="76.5" fill="#8b949e" text-anchor="end">tiny</text>
+<rect x="170" y="46" width="71.6" height="14" rx="3" fill="#2f81f7"><animate attributeName="width" from="0" to="71.6" begin="0.00s" dur="1s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></rect>
+<text x="247.6" y="57.5" fill="#6e7681" font-size="12">17.2%<animate attributeName="opacity" from="0" to="1" begin="0.90s" dur="0.4s" fill="freeze"/></text>
+<rect x="170" y="63" width="210.3" height="14" rx="3" fill="#3fb950"><animate attributeName="width" from="0" to="210.3" begin="0.05s" dur="1s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></rect>
+<text x="386.3" y="74.5" fill="#6e7681" font-size="12">50.5%<animate attributeName="opacity" from="0" to="1" begin="0.95s" dur="0.4s" fill="freeze"/></text>
+<rect x="170" y="80" width="433.4" height="14" rx="3" fill="#d29922"><animate attributeName="width" from="0" to="433.4" begin="0.10s" dur="1s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></rect>
+<text x="609.4" y="91.5" fill="#6e7681" font-size="12">104.1%<animate attributeName="opacity" from="0" to="1" begin="1.00s" dur="0.4s" fill="freeze"/></text>
+<text x="162" y="137.5" fill="#8b949e" text-anchor="end">base</text>
+<rect x="170" y="107" width="57.9" height="14" rx="3" fill="#2f81f7"><animate attributeName="width" from="0" to="57.9" begin="0.08s" dur="1s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></rect>
+<text x="233.9" y="118.5" fill="#6e7681" font-size="12">13.9%<animate attributeName="opacity" from="0" to="1" begin="0.98s" dur="0.4s" fill="freeze"/></text>
+<rect x="170" y="124" width="159.5" height="14" rx="3" fill="#3fb950"><animate attributeName="width" from="0" to="159.5" begin="0.13s" dur="1s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></rect>
+<text x="335.5" y="135.5" fill="#6e7681" font-size="12">38.3%<animate attributeName="opacity" from="0" to="1" begin="1.03s" dur="0.4s" fill="freeze"/></text>
+<rect x="170" y="141" width="366.8" height="14" rx="3" fill="#d29922"><animate attributeName="width" from="0" to="366.8" begin="0.18s" dur="1s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></rect>
+<text x="542.8" y="152.5" fill="#6e7681" font-size="12">88.1%<animate attributeName="opacity" from="0" to="1" begin="1.08s" dur="0.4s" fill="freeze"/></text>
+<text x="162" y="198.5" fill="#8b949e" text-anchor="end">small</text>
+<rect x="170" y="168" width="38.3" height="14" rx="3" fill="#2f81f7"><animate attributeName="width" from="0" to="38.3" begin="0.16s" dur="1s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></rect>
+<text x="214.3" y="179.5" fill="#6e7681" font-size="12">9.2%<animate attributeName="opacity" from="0" to="1" begin="1.06s" dur="0.4s" fill="freeze"/></text>
+<rect x="170" y="185" width="89.1" height="14" rx="3" fill="#3fb950"><animate attributeName="width" from="0" to="89.1" begin="0.21s" dur="1s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></rect>
+<text x="265.1" y="196.5" fill="#6e7681" font-size="12">21.4%<animate attributeName="opacity" from="0" to="1" begin="1.11s" dur="0.4s" fill="freeze"/></text>
+<rect x="170" y="202" width="245.2" height="14" rx="3" fill="#d29922"><animate attributeName="width" from="0" to="245.2" begin="0.26s" dur="1s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></rect>
+<text x="421.2" y="213.5" fill="#6e7681" font-size="12">58.9%<animate attributeName="opacity" from="0" to="1" begin="1.16s" dur="0.4s" fill="freeze"/></text>
+<text x="162" y="259.5" fill="#8b949e" text-anchor="end">large-v3-turbo</text>
+<rect x="170" y="229" width="21.2" height="14" rx="3" fill="#2f81f7"><animate attributeName="width" from="0" to="21.2" begin="0.24s" dur="1s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></rect>
+<text x="197.2" y="240.5" fill="#6e7681" font-size="12">5.1%<animate attributeName="opacity" from="0" to="1" begin="1.14s" dur="0.4s" fill="freeze"/></text>
+<rect x="170" y="246" width="45.8" height="14" rx="3" fill="#3fb950"><animate attributeName="width" from="0" to="45.8" begin="0.29s" dur="1s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></rect>
+<text x="221.8" y="257.5" fill="#6e7681" font-size="12">11%<animate attributeName="opacity" from="0" to="1" begin="1.19s" dur="0.4s" fill="freeze"/></text>
+<rect x="170" y="263" width="180.3" height="14" rx="3" fill="#d29922"><animate attributeName="width" from="0" to="180.3" begin="0.34s" dur="1s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></rect>
+<text x="356.3" y="274.5" fill="#6e7681" font-size="12">43.3%<animate attributeName="opacity" from="0" to="1" begin="1.24s" dur="0.4s" fill="freeze"/></text>
+<rect x="170" y="294" width="12" height="12" rx="2" fill="#2f81f7"/>
+<text x="187" y="304" fill="#6e7681" font-size="12">clean</text>
+<rect x="246" y="294" width="12" height="12" rx="2" fill="#3fb950"/>
+<text x="263" y="304" fill="#6e7681" font-size="12">room, 15 dB babble</text>
+<rect x="413" y="294" width="12" height="12" rx="2" fill="#d29922"/>
+<text x="430" y="304" fill="#6e7681" font-size="12">room, 5 dB babble</text>
+<text x="16" y="326" fill="#6e7681" font-size="11">Lower is better. tiny passes 100% at 5 dB because it inserts words that were never spoken.</text>
+</svg>

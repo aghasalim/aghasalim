@@ -24,6 +24,18 @@ users, point the camera and get one short answer offline. A terse prompt beats
 the describe-everything prompt, 68% to 62%, with zero words before the value.
 Dials and digital readouts are still read badly and the README says so.
 
+## Measured, not claimed
+
+Three charts drawn from the results files of the repos above by
+[scripts/make_charts.py](scripts/make_charts.py). The numbers are the same
+ones the repos' own CI checks against their CSVs.
+
+![word error rate per whisper model, clean versus noisy room](assets/captions-wer.svg)
+
+![one-answer-vision accuracy per question type and prompt](assets/vision-accuracy.svg)
+
+![model-nerf-watch pass rate per probe family across three runs](assets/nerf-families.svg)
+
 ## Tools
 
 ![](https://skillicons.dev/icons?i=py,cpp,pytorch,sklearn,fastapi,docker,githubactions,postgres,linux,git&theme=light&perline=10)
