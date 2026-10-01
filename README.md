@@ -6,6 +6,13 @@ so I check my own numbers before anyone else does.
 
 Open to AI and backend internships.
 
+## Recent
+
+[one-answer-vision](https://github.com/aghasalim/one-answer-vision): for blind
+users, point the camera and get one short answer offline. A terse prompt beats
+the describe-everything prompt, 68% to 62%, with zero words before the value.
+Dials and digital readouts are still read badly and the README says so.
+
 ## Tools
 
 ![](https://skillicons.dev/icons?i=py,cpp,pytorch,sklearn,fastapi,docker,githubactions,postgres,linux,git&theme=light&perline=10)
