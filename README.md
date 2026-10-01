@@ -8,6 +8,11 @@ Open to AI and backend internships.
 
 ## Recent
 
+[model-nerf-watch](https://github.com/aghasalim/model-nerf-watch): a daily
+canary for silent model degradation, with confidence intervals. The honest
+result is the noise floor: 60 probes can see a 20 point drop and cannot see a
+5 point one. A planted downgrade is caught at p of 1e-08.
+
 [offline-live-captions](https://github.com/aghasalim/offline-live-captions):
 live captions that never touch the network. Whisper turbo on an M4 gets 5.1%
 word error rate clean and 11.0% in a simulated noisy room, 1.7 seconds behind
