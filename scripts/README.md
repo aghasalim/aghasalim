@@ -18,5 +18,6 @@ To bring it back: rename it to `check_claims.py`, restore
 repository with the figures beside it.
 
 `verify/` recomputes the derived fields of `reports/demo_status.json` from the
-raw ones, in Go and in SQL, and CI fails if either disagrees with what
-`ping_demos.py` wrote. See `verify/README.md`.
+raw ones, in seven languages, and CI fails if any of them disagrees with what
+`ping_demos.py` wrote. The pinger does not commit the file, so what `verify/`
+checks is the snapshot in the repo, not the latest scheduled run. See `verify/README.md`.
