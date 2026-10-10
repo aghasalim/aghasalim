@@ -1,8 +1,8 @@
 # Aghasalim Mustafazada
 
 Third year AI student at Howest, Belgium. Mostly anomaly detection and
-interpretability. I get suspicious of results that only work on the benchmark,
-so I check my own numbers before anyone else does.
+interpretability. I like rerunning my own results before I believe them, because
+a lot of things only work on the benchmark.
 
 Open to AI and backend internships.
 
@@ -15,13 +15,15 @@ FastAPI, Streamlit, Docker, GitHub Actions, PostgreSQL, Raspberry Pi, Arduino.
 
 ## Other
 
-Paper: [A Multilingual Groundedness Detector that Runs on a Raspberry Pi](https://doi.org/10.2139/ssrn.7497398),
-with Teymur Eyvazov, SSRN 2026.
+Papers on SSRN, 2026:
+
+- [A Multilingual Groundedness Detector that Runs on a Raspberry Pi](https://doi.org/10.2139/ssrn.7497398), with Teymur Eyvazov
+- [Retrieval over an Amended Law](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7590363), on the EU AI Act, with Murad Eyvazov (in review)
+- [Evaluating a From-Scratch PatchCore on MVTec AD](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7590958), with Murad Eyvazov (in review)
 
 Gold medal at the International STEM Olympiad in mathematics, 2022. Scored
-0.9086 on the IEEE-CIS private leaderboard, which
-[Kaggle](https://www.kaggle.com/aghasalimmustafazada) graded against labels I
-never got to see.
+0.9086 on the IEEE-CIS private leaderboard on
+[Kaggle](https://www.kaggle.com/aghasalimmustafazada).
 
 ## Contact
 
