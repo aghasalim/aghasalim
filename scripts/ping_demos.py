@@ -120,8 +120,9 @@ def main() -> int:
                 try:
                     row = check(page, name, url)
                 except Exception as e:
-                    row = {"demo": name, "url": url, "ok": False,
-                           "error": f"{type(e).__name__}: {e}"[:200]}
+                    # same keys as a row from check(), so verify/ can read it
+                    row = {"demo": name, "url": url, "was_asleep": False, "woken": False,
+                           "ok": False, "error": f"{type(e).__name__}: {e}"[:200]}
                 ctx.close()
                 row["attempts"] = attempt
                 if row.get("ok") or attempt == ATTEMPTS:
