@@ -26,5 +26,7 @@ jobs:
       # A real browser, not curl: a sleeping app serves the same HTTP 303 and
       # the same HTML shell as a running one, so curl cannot tell them apart
       # and cannot wake anything.
+      # This writes reports/demo_status.json but does not commit it. The copy in
+      # the repo, which verify/ checks, is a snapshot from one run.
       - name: load every demo like a visitor would
         run: python scripts/ping_demos.py
