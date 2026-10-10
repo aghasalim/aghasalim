@@ -2,7 +2,7 @@ name: verify the published status file
 
 # reports/demo_status.json is written by scripts/ping_demos.py and was never
 # read back by anything. This recomputes the parts of it that are derived
-# rather than measured, in eight languages that share no code with the script,
+# rather than measured, in seven languages that share no code with the script,
 # and fails if any of them disagrees.
 on:
   push:
