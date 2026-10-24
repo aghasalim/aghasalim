@@ -18,8 +18,8 @@ FastAPI, Streamlit, Docker, GitHub Actions, PostgreSQL, Raspberry Pi, Arduino.
 Papers on SSRN, 2026:
 
 - [A Multilingual Groundedness Detector that Runs on a Raspberry Pi](https://doi.org/10.2139/ssrn.7497398), with Teymur Eyvazov
-- [Retrieval over an Amended Law](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7590363), on the EU AI Act, with Murad Eyvazov (in review)
-- [Evaluating a From-Scratch PatchCore on MVTec AD](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7590958), with Murad Eyvazov (in review)
+- [Retrieval over an Amended Law](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7590363), on the EU AI Act, with Murad Eyvazov
+- [Evaluating a From-Scratch PatchCore on MVTec AD](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7590958), with Murad Eyvazov 
 
 Gold medal at the International STEM Olympiad in mathematics, 2022. Scored
 0.9086 on the IEEE-CIS private leaderboard on
