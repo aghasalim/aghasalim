@@ -29,7 +29,7 @@ Gold medal at the International STEM Olympiad in mathematics, 2022. Scored
 
 salim.mustafazada@student.howest.be
 
-[Website](https://aghasalim.github.io/) ·
+[Website](https://aghasalim.com) ·
 [LinkedIn](https://linkedin.com/in/mustafazada) ·
 [Kaggle](https://www.kaggle.com/aghasalimmustafazada) ·
 [ORCID](https://orcid.org/0009-0001-8746-4582)
