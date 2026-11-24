@@ -1,5 +1,3 @@
-<p align="center"><img src="assets/banner.jpg" alt="Line drawing of measurement instruments joined by a thin line, ending in a chart with error bars" width="100%"></p>
-
 # Aghasalim Mustafazada
 
 Third year AI student at Howest, Belgium, and co-founder and CTO of
